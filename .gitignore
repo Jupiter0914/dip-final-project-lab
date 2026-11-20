@@ -1,0 +1,6 @@
+/data/
+/local/
+/dist/
+__pycache__/
+*.py[cod]
+*.part
