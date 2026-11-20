@@ -1,0 +1,27 @@
+{
+  "verified": {
+    "sources": 136,
+    "polygons": 1632,
+    "refitted": 16
+  },
+  "statistics": {
+    "dev": {
+      "sources": 36,
+      "mean_relative_xor_saved": 0.0676188415799708,
+      "ci95": [
+        0.06037147202466517,
+        0.0751100934366117
+      ],
+      "improved": 36
+    },
+    "confirm": {
+      "sources": 100,
+      "mean_relative_xor_saved": 0.07116044200505033,
+      "ci95": [
+        0.06348263810002806,
+        0.07994297415052856
+      ],
+      "improved": 99
+    }
+  }
+}

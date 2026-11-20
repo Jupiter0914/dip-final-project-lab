@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": {
+    "all_sources_and_bytes": true,
+    "mean_relative_xor": true,
+    "paired_ci_positive": true,
+    "iou_effect": true,
+    "win_fraction": true,
+    "both_budgets": true,
+    "other_comparators": true,
+    "boundary_tolerance": true,
+    "worst_iou": true,
+    "encoder_p95": true,
+    "peak_memory": true
+  },
+  "primary_baseline": "geometry"
+}
