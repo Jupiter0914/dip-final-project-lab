@@ -1,0 +1,49 @@
+{
+  "grid": 8,
+  "radii": [
+    8,
+    4,
+    2,
+    1,
+    4,
+    2,
+    1
+  ],
+  "sm_start": 50,
+  "main_k": [
+    16,
+    32
+  ],
+  "extra_k": [
+    8,
+    12,
+    24,
+    48
+  ],
+  "methods": [
+    "rdp",
+    "grid_dp",
+    "full_dp",
+    "geometry",
+    "raster",
+    "local_iou",
+    "sm_iou",
+    "post_xor",
+    "post_guard"
+  ],
+  "curve_methods": [
+    "geometry",
+    "raster",
+    "local_iou",
+    "sm_iou",
+    "post_xor",
+    "post_guard"
+  ],
+  "seeds": [
+    1703,
+    2909,
+    4231
+  ],
+  "bootstrap_seed": 22917,
+  "bootstrap_draws": 10000
+}

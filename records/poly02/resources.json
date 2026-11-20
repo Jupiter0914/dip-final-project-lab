@@ -1,0 +1,34 @@
+{
+  "upf.zip": {
+    "url": "https://addons.mathworks.com/downloads/9b/9bf0e77b-720e-422d-a51d-beee4b9483fe/1.0.0/unconstrained_polygonal_fitting-1.0.0.zip",
+    "bytes": 70808,
+    "sha256": "67c9a9f527142f8e2e5f4cec7a8a2724930059ecb876cc678095dbc3a868c1bc"
+  },
+  "shapes-author.bin": {
+    "url": "https://drive.usercontent.google.com/download?id=1_A3u9nnwx--FMbmn8HAjBdRvkYtL4j4W&export=download&confirm=t",
+    "bytes": 1410456,
+    "sha256": "f6a132c16ca4800fc9cfbe3d469a086599aba67783448362c0bc2275bf7e6d1c"
+  },
+  "paper.pdf": {
+    "url": "https://mdpi-res.com/d_attachment/algorithms/algorithms-17-00025/article_deploy/algorithms-17-00025-v2.pdf",
+    "bytes": 2607784,
+    "sha256": "b61b404a1cf4dff210c5832fa806506f53e432009425e21e2d0969709531a31a"
+  },
+  "source_members": {
+    "Building170.gif": "85d733282c6025d5631a4fed4241a60ec261903f9992dca081a5dfb8285c4434",
+    "Fish-a100.gif": "be4081859d8dbb65f27c23825258eb6603cc4caac07ae9357e1c48cd708c038f",
+    "README.md": "e45f135972ff4c809b8bddffbddb5fd347f91e7f9f6879e41b6963c7e66cff1e",
+    "correctSorting.m": "74137247c4e688347a8b6153935946561073ce7a18dae921a6772c4a18b5ca40",
+    "drawSol.m": "22d71828dec1c0628247fb379f8b11898a1040e9656c4b31623ee022cc622e00",
+    "getBoundaryAnalysis.m": "25f856f12937caddcd7f94454bc629297608c37ebfd4c1a845ff834bf6047a99",
+    "getDICE_IOU.m": "214317be84d4022b0f1f03111018463731392456eb70fcfca350e874699012aa",
+    "getPA_EA.m": "9684b7aff6a00a7b69a6c46e5797dc28a7f14c0672f78f967008e0f5070e92c4",
+    "getPSO_EA_Coords.m": "12ba235c91328f9d21df2cb2e73277f41ac76b59a0de8d7983220f2706592109",
+    "getRandomSolCoords.m": "835d3ac6c34b03887e4c7c50eec5ba0e24d34f2444a771987e2243dfd51a5493",
+    "license.txt": "f803a8fcaec0ce1a2d01290680f026f884586951d573a3255258de0070a51e75",
+    "myImRead.m": "d27ce0fc53e99f4a7a0d9daa0368832fcc1e757250720187fdb790f08e93d672",
+    "readme.txt": "fb1c693f4947abfbb98a5a2a6f37ee8cc63fc79b11121dc2ff9d7425fda2500e",
+    "resources/previewImage.jpeg": "4b630c49a9ec1d4b2e04ee0f121bdd6212c10a8280a18b8e43c3ba6d0d55d8e7",
+    "runUPF_PSO.m": "db15f9f8a7c63730fde25fa5961a1fd74fcc94a19ead5a7a3d5bbc7238abf674"
+  }
+}

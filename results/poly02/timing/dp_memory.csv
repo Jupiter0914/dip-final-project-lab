@@ -1,0 +1,13 @@
+id,k,method,n_contour,encode_ms,before_rss,peak_before,end_rss_bytes,os,peak_bytes,peak_source
+yorkshire_terrier_135,16,grid_dp,483,10.808,50221056,50221056,56803328,Windows,59641856,Windows peak working set
+yorkshire_terrier_135,32,grid_dp,483,19.4758,50262016,50262016,57204736,Windows,69251072,Windows peak working set
+yorkshire_terrier_135,16,full_dp,483,27.3639,50069504,50069504,55730176,Windows,60784640,Windows peak working set
+yorkshire_terrier_135,32,full_dp,483,44.4869,50388992,50388992,55455744,Windows,60567552,Windows peak working set
+english_cocker_spaniel_143,16,grid_dp,974,10.8114,50577408,50577408,56348672,Windows,59940864,Windows peak working set
+english_cocker_spaniel_143,32,grid_dp,974,19.8414,50696192,50696192,56664064,Windows,70721536,Windows peak working set
+english_cocker_spaniel_143,16,full_dp,974,122.3156,50479104,50479104,54984704,Windows,78610432,Windows peak working set
+english_cocker_spaniel_143,32,full_dp,974,204.6377,50569216,50569216,55099392,Windows,78630912,Windows peak working set
+shiba_inu_147,16,grid_dp,1558,10.6084,50692096,50692096,56274944,Windows,59621376,Windows peak working set
+shiba_inu_147,32,grid_dp,1558,20.6277,50638848,50638848,56528896,Windows,71106560,Windows peak working set
+shiba_inu_147,16,full_dp,1558,355.6202,50888704,50888704,55107584,Windows,113733632,Windows peak working set
+shiba_inu_147,32,full_dp,1558,587.3311,50442240,50442240,54927360,Windows,113573888,Windows peak working set

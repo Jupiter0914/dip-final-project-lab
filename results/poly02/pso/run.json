@@ -1,0 +1,19 @@
+{
+  "startup_s": 41.079066899605095,
+  "matlab": [
+    "24.1.0.2537033 (R2024a)",
+    "E:\\dip-final-project-lab\\data\\poly02\\upf\\getPSO_EA_Coords.m"
+  ],
+  "ids": [
+    "pomeranian_10",
+    "pug_127",
+    "British_Shorthair_187"
+  ],
+  "seeds": [
+    1703,
+    2909,
+    4231
+  ],
+  "total_wall_s": 103.0333788995631,
+  "matlab_exit": 0
+}

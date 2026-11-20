@@ -1,0 +1,38 @@
+{
+  "upf.zip": [
+    {
+      "url": "https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/156966/versions/1/download/zip",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://addons.mathworks.com/downloads/9b/9bf0e77b-720e-422d-a51d-beee4b9483fe/1.0.0/download.zip",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/156966/versions/1/contents.zip",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "shapes.zip": [
+    {
+      "url": "https://drive.usercontent.google.com/download?id=1_A3u9nnwx--FMbmn8HAjBdRvkYtL4j4W&export=download&confirm=t",
+      "bytes": 1410456,
+      "mime": "application/octet-stream",
+      "reason": "unexpected file signature"
+    },
+    {
+      "url": "https://drive.google.com/uc?export=download&id=1_A3u9nnwx--FMbmn8HAjBdRvkYtL4j4W",
+      "bytes": 1410456,
+      "mime": "application/octet-stream",
+      "reason": "unexpected file signature"
+    }
+  ],
+  "paper.pdf": [
+    {
+      "url": "https://mdpi-res.com/d_attachment/algorithms/algorithms-17-00025/article_deploy/algorithms-17-00025-v2.pdf",
+      "bytes": 2607784,
+      "sha256": "b61b404a1cf4dff210c5832fa806506f53e432009425e21e2d0969709531a31a",
+      "received": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "package": "POLY02",
+  "basis": "9e9af734e61a4ead37ecda48d25196452d253dc2",
+  "prior_freeze": "ed8c4ede27f1e4a28b0d4c6d48cf5d569593dac7",
+  "primary": "Oxford official test 25 known confirmation breeds, fresh 8 sources per breed, prior 136 IDs and byte duplicates excluded",
+  "oxford_n": 200,
+  "cross": "Author distributed MPEG_7_resize one silhouette per each of 70 classes; separate external domain; exclude utility GIFs and 3 reserved filenames",
+  "guard": "Exact F at r=2 of the geometric start; zero slack across all budgets and images, zero moves allowed",
+  "primary_comparators": [
+    "geometry",
+    "local_iou",
+    "post_xor"
+  ],
+  "diagnostic_comparators": [
+    "raster",
+    "sm_iou",
+    "grid_dp",
+    "full_dp",
+    "rdp"
+  ],
+  "thresholds": {
+    "mean_xor_gain": 0.04,
+    "retained": 0.8,
+    "iou_margin_pp": 0.1,
+    "direct_relative_margin": 0.02,
+    "p95_ms": 150
+  },
+  "gates": "On all 200 at K16/32: complete fixed-byte outputs, XOR and BF2 never worse than geometry in each source-budget; photo-average relative XOR savings >=4%, 95% lower>0, mean positive both K; retain >=80% of unguarded post-processing's mean relative gains vs geometry. Lower 95% bound of guarded IoU minus local_iou >= -0.10 percentage points. At least one unguarded BF2 loss; complete encoder p95 <=150 ms. Cross domain assessed independently, with all rejects disclosed.",
+  "attribution": "Direct v1 XOR vs matched local_iou considered practically equivalent on region metrics only if the whole source-paired 95% intervals lie in +/-2% relative XOR and +/-0.10 IoU points. An average close to zero alone is insufficient.",
+  "statistics": "Use original source as paired unit, K-specific and mean of K16/32 within source. Percentile bootstrap 10000, seed 22917; also pooled pixels reported separately. Raw counts exact; ties in reported floating differences within 1e-12. Any zero reference XOR uses max(1,XORref).",
+  "curve": "25 preselected Oxford test photos (first retained per breed), same sources at 8,12,24,48, plus their K16/32 results in main; descriptive auxiliary rates.",
+  "cases": "On new Oxford: K16 closest to median positive guard vs geo relative XOR gain; largest v1 BF2 loss vs geometry across both K; largest guarded BF2 rescue over unguarded among unguarded losses vs geometry; most extra guard XOR over free when a guard rejection occurred; worst BF1 vs geometry despite preserved BF2. These are illustrations; do not tune using them."
+}
