@@ -1,0 +1,9 @@
+{
+  "stage": "screen",
+  "photos": 12,
+  "rows": 384,
+  "wall_s": 6.249211200047284,
+  "peak_working_set_bytes": 68427776,
+  "failures": [],
+  "timer": "perf_counter_ns; encode includes native foreground/contour extraction, fit and actual serialization; decoder validates polygon; I/O and scoring outside"
+}

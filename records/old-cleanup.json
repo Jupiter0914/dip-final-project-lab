@@ -1,0 +1,61 @@
+{
+  "archive": "E:\\dip-project-archives\\screen-restoration-20261120-223945",
+  "manifest_sha256": "64984a0afdf412fd3e874d8ef19b5a7ec4a30586e17b7a997c30ce712235a668",
+  "available_before": 308813488128,
+  "available_after": 317288108032,
+  "volume_delta_bytes": 8474619904,
+  "logical_bytes": 8466009785,
+  "targets": [
+    {
+      "path": "E:\\dip-screen-restoration-study\\runs",
+      "files": 861,
+      "logical_bytes": 2040248143
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\data",
+      "files": 194,
+      "logical_bytes": 657683901
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\weights",
+      "files": 3,
+      "logical_bytes": 134871417
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\external",
+      "files": 279,
+      "logical_bytes": 45336432
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\local",
+      "files": 517,
+      "logical_bytes": 5532476542
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\.venv",
+      "files": 1750,
+      "logical_bytes": 28982144
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\scripts\\__pycache__",
+      "files": 18,
+      "logical_bytes": 155999
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\review.zip",
+      "files": 1,
+      "logical_bytes": 7880870
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\stage2-review.zip",
+      "files": 1,
+      "logical_bytes": 18374253
+    },
+    {
+      "path": "E:\\dip-screen-restoration-study\\stage2-review.zip.sha256",
+      "files": 1,
+      "logical_bytes": 84
+    }
+  ],
+  "timestamp": "2026-11-20T22:43:45.1053987+08:00"
+}

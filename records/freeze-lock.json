@@ -1,0 +1,19 @@
+{
+  "configs/fixed.json": "09e843529e15f0193eedae374ce1792de1a3fdbd03b8ad22814734e3be1eeaf4",
+  "configs/protocol.json": "b30e5b2173639f49714f040b20abac5c592fb77e48649c0106129a99c0473365",
+  "configs/screen.json": "3bfc3ca72cb17eaf64ec3d29cef594f0426a48d31362eb9a0402a4e524085c35",
+  "records/data.json": "430c4c0a8e5c3f2e991fa6c94e0e50562e978b3b8b460d36cc2eca901e6e7063",
+  "records/freeze.md": "e1e3fe65168c8188d988da4af2060b45e66c2e234f06dd4df2eaae2d72b763fd",
+  "records/samples.csv": "13c7423e75c7248e45219a8d56001bbbd3efdeb094c74a647adb150651ce48d1",
+  "requirements.txt": "ee22af65e5385b97034b0a63e53c9d5613510167651b7fab17230e784cd0d927",
+  "scripts/check_math.py": "b647fb1cb53bd8ee108d93da110d59b6f259d821de7dee188e209cc5ba516c72",
+  "scripts/prepare_data.py": "0378394b394dda81fb6bd0182a7ef6653220fd345e07629f3a7554db7cb4471d",
+  "scripts/study.py": "1b522086dcac0d8dafb3b24b49c49d2d16d57ab8a1f13949b729aa244e6a6d30",
+  "scripts/summarize.py": "7db90387f76ddb5148af90012dcfb560a3b98772027f55713a86f6ec7671ffb1",
+  "scripts/verify_lock.py": "0e3c3c7c29e1afbfc9c6b5c7d58e141995aa94d62e9cc7cf1d18bad57400897e",
+  "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/baselines.py": "195e49f774111552a2537a2d0036c2f03d4d76287b6c4555012ca219d65f84c8",
+  "src/codec.py": "08a24e357604b268a0afe27248af968ab4328b7f6d0b2170751a309ce04f1a37",
+  "src/method.py": "9209ba718683c0867d4cd6de015b4905a4ca3f767a19f8092946ad14ac120ec5",
+  "src/metrics.py": "fdf9e42b507d6afc5e90b78270ccd842b7cd71de773f3095a70406628c44cc43"
+}

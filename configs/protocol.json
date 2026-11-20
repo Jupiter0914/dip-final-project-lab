@@ -1,0 +1,19 @@
+{
+  "title": "固定顶点预算下基于回填误差的二值外轮廓多边形编码",
+  "scope": "One known binary exterior, ordinary offline annotation export, exact integer coordinates decoded by OpenCV LINE_8 at native size; no recognition or segmentation claim.",
+  "primary_baseline": "geometry",
+  "confirmation_n": 100,
+  "source_unit": "Original photo. Paired mean over K=16 and 32. Equal weights per photo.",
+  "gates": {
+    "mean_relative_xor_min": 0.05,
+    "iou_gain_min": 0.001,
+    "win_fraction_min": 0.75,
+    "boundary_gain_min": -0.01,
+    "worst_iou_min": -0.01,
+    "encode_p95_max_ms": 120,
+    "peak_run_bytes_max": 536870912
+  },
+  "bootstrap": "10000 paired photo bootstrap resamples, percentile 95%, seed 37129. Secondary breed-cluster bootstrap. Require primary lower bound > 0 and positive mean IoU at both budgets, and versus every alternative comparator.",
+  "incomplete": "Any missing/corrupt/failing photo, wrong byte count, non-simple polygon or failed listed gate invalidates advancement. Retain all outcomes, no threshold change. Next confirmation for a modified method must use fresh unseen content.",
+  "case_rule": "For the frozen primary comparator choose source with maximum, nearest-median and minimum mean relative XOR gain across budgets, and source with largest remaining normalized XOR at 16 vertices. Show K=16 for each. Log actual local error and any per-budget losses."
+}

@@ -1,0 +1,15 @@
+{
+  "archive": "data/annotations.tar.gz",
+  "md5": "95a8c909bbe2e81eed6a22bccdf3f68f",
+  "sha256": "52425fb6de5c424942b7626b428656fcbd798db970a937df61750c0f1d358e91",
+  "bytes": 19173078,
+  "official_lists": {
+    "trainval": "408f3f609481b939c94634169e6413414b733a3faeba440cbdcc5c02142eebdc",
+    "test": "a5454003774ffe01f4f322756d3ba5495bae21cb30bb217ab285dbfa2bef245c"
+  },
+  "urls": [
+    "https://thor.robots.ox.ac.uk/datasets/pets/annotations.tar.gz",
+    "https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz"
+  ],
+  "partition_rule": "sha256(dip-rings-v1|name); 4 cat and 8 dog breeds for dev; 3 trainval sources/breed; other breeds 4 official test sources/breed"
+}

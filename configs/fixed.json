@@ -1,0 +1,66 @@
+{
+  "budgets": [
+    16,
+    32
+  ],
+  "methods": {
+    "rdp": {
+      "grid": 0,
+      "radii": []
+    },
+    "dp": {
+      "grid": 8,
+      "radii": []
+    },
+    "full_dp": {
+      "grid": -1,
+      "radii": []
+    },
+    "geometry": {
+      "grid": 8,
+      "radii": [
+        8,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1
+      ]
+    },
+    "geometry_long": {
+      "grid": 8,
+      "radii": [
+        8,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1,
+        8,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1,
+        1
+      ]
+    },
+    "raster": {
+      "grid": 8,
+      "radii": [
+        8,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1
+      ]
+    }
+  },
+  "bootstrap_seed": 37129,
+  "bootstrap_draws": 10000
+}

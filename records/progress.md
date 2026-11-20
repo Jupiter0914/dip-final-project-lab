@@ -1,3 +1,7 @@
 # 执行进度
 
-已独立归档旧课题，校验 624 个浮点预测、Git bundle 和两份审核包。GitHub API 确认新库为 private。本轮已登记四个候选。优先比较两个可以使用真实蒙版的任务。当前命令为 `python scripts/prepare_data.py`，之后只运行开发数据。
+旧项目的独立归档、离线回放与十项清理已完成。新私有仓库已建立。候选 B 已淘汰；C、D 从未使用测试数据。
+
+A 的全开发比较已完成。36 张真实源照、两档预算、7 个输出（含输入）共 504 条记录。最强开发几何对照 IoU 0.970964，回填法 0.973008；相对错分减少 6.76%，代价为编码平均 19.69 至 36.41 ms。更高计算量的几何对照与全原始轮廓点 DP 已纳入。
+
+下一步在 `selection-freeze-v1` 推送并核对后执行 `python scripts/study.py confirm` 和 `python scripts/summarize.py results/confirm --decision`。运行入口将核对提交里的冻结文件和脚本哈希。结果目录拒绝覆盖。
