@@ -1,0 +1,7 @@
+{
+  "trials": 28,
+  "same_seed_and_POL1": true,
+  "raw_float_vertices_equal": true,
+  "source": "fresh isolated MATLAB run",
+  "timings_reused": false
+}

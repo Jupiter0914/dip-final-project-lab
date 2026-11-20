@@ -1,0 +1,15 @@
+{
+  "offline_methods": 6,
+  "selected_budgets": [
+    16,
+    32
+  ],
+  "real_guard_rejection": true,
+  "server_loopback": true,
+  "uploaded_binary_and_catalog_byte_match": true,
+  "downloaded_method": "sm_iou",
+  "id": "great_pyrenees_60",
+  "bytes": 74,
+  "sha256": "cb3b5ee099d2d37fbaec95a7247a0ad03561a5ab08c204914f94ea2f20cdc7cc",
+  "browser_errors": []
+}

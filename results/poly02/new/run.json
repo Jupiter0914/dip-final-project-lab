@@ -1,0 +1,10 @@
+{
+  "sources": 200,
+  "rows": 3600,
+  "failures": [],
+  "wall_s": 172.2709973002784,
+  "end_rss_bytes": 62824448,
+  "os": "Windows",
+  "peak_bytes": 142548992,
+  "peak_source": "Windows peak working set"
+}

@@ -1,0 +1,15 @@
+{
+  "author_members": 15,
+  "unique_inputs": 306,
+  "real_case_refits": 10,
+  "demo_decisions": [
+    "accepted",
+    "rejected"
+  ],
+  "independent_full_local_iou_paths": 2,
+  "reaggregated_stages": [
+    "new",
+    "cross"
+  ],
+  "all_published_primary_checks_reproduced": true
+}

@@ -1,0 +1,18 @@
+{
+  "primary": "new Oxford",
+  "checks": {
+    "complete": true,
+    "xor_gain": true,
+    "positive_ci": true,
+    "no_individual_loss": true,
+    "both_k": true,
+    "retained": true,
+    "near_local_iou": true,
+    "guard_needed": true,
+    "latency": true
+  },
+  "passes_all": true,
+  "retained_gain": 0.9265263371149517,
+  "p95_encode_ms": 67.5974,
+  "direct_xor_and_iou_within_practical_margins": true
+}
