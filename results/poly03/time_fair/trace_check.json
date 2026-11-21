@@ -1,0 +1,10 @@
+{
+  "success_settings": 93,
+  "all_candidate_separable_scores": 4248,
+  "accepted_steps": 173,
+  "trace_and_bytes_matched": true,
+  "full_parity_candidate_pixel_maps_checked": 4248,
+  "full_parity_accepted_steps": 173,
+  "full_parity_files_checked": 93,
+  "wall_s": 14.932133700232953
+}

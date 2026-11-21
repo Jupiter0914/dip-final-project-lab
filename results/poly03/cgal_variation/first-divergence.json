@@ -1,0 +1,110 @@
+[
+  {
+    "cost": "squared",
+    "first_divergent_pop_index": 0,
+    "left": {
+      "id": "scottish_terrier_199",
+      "budget": 128,
+      "target": 26,
+      "input_sha256": "55267e76f15e30283c3377601eb9452a9034134ed17a9bae589b5c909cb1a989",
+      "policy": "upstream",
+      "seed": 7,
+      "process": 0,
+      "repeat": 0,
+      "cost": "squared",
+      "ring_order": "0,2,1",
+      "trace_sha256": "23956ee028467b8de13cba45b37b6dfffcc410593eaa0e9e9aa1e7ed668c2723",
+      "pops": 593,
+      "digest": "4c24d8864814f919c6f22fd48ea8482eef62a8b6afb613838d8b2e92030c6dcf",
+      "xor": 4450,
+      "vector": "ok",
+      "digital": "ok"
+    },
+    "right": {
+      "id": "scottish_terrier_199",
+      "budget": 128,
+      "target": 26,
+      "input_sha256": "55267e76f15e30283c3377601eb9452a9034134ed17a9bae589b5c909cb1a989",
+      "policy": "upstream",
+      "seed": 7,
+      "process": 0,
+      "repeat": 1,
+      "cost": "squared",
+      "ring_order": "1,2,0",
+      "trace_sha256": "8e245c2ca45508c067f8032a5d4ca7fc989a972fcb9bdb390f48024f8ebdcb92",
+      "pops": 593,
+      "digest": "26302b856f56e8bccd3d6415ad14da5eeb26102b6230b067cd66ebf86759dedd",
+      "xor": 4896,
+      "vector": "ok",
+      "digital": "digital_counts"
+    },
+    "left_xy_cost_current_vertices": [
+      1328,
+      951,
+      2.4827586206896552,
+      618
+    ],
+    "right_xy_cost_current_vertices": [
+      971,
+      564,
+      2.4827586206896552,
+      618
+    ],
+    "same_numeric_cost": true,
+    "same_vertex_count": true
+  },
+  {
+    "cost": "scaled",
+    "first_divergent_pop_index": 22,
+    "left": {
+      "id": "scottish_terrier_199",
+      "budget": 128,
+      "target": 26,
+      "input_sha256": "55267e76f15e30283c3377601eb9452a9034134ed17a9bae589b5c909cb1a989",
+      "policy": "upstream",
+      "seed": 7,
+      "process": 0,
+      "repeat": 0,
+      "cost": "scaled",
+      "ring_order": "0,2,1",
+      "trace_sha256": "c5ac5587841198e50c18ccd676b781c69219463fcc64b86782b75b2fcf9026d7",
+      "pops": 593,
+      "digest": "bac8a171969602cbc89f322ecaca2277abe00655f4f09a4da153e2006add9260",
+      "xor": 8392,
+      "vector": "ok",
+      "digital": "digital_counts"
+    },
+    "right": {
+      "id": "scottish_terrier_199",
+      "budget": 128,
+      "target": 26,
+      "input_sha256": "55267e76f15e30283c3377601eb9452a9034134ed17a9bae589b5c909cb1a989",
+      "policy": "upstream",
+      "seed": 7,
+      "process": 0,
+      "repeat": 1,
+      "cost": "scaled",
+      "ring_order": "1,2,0",
+      "trace_sha256": "c2699add9410835ff2ef801839a10de301dba92e729540a6cdbc06eed2568388",
+      "pops": 593,
+      "digest": "50031c73c992c1408fbba412b301dde208e2b136df35f47f01745ce8c162a4f9",
+      "xor": 8779,
+      "vector": "ok",
+      "digital": "digital_counts"
+    },
+    "left_xy_cost_current_vertices": [
+      1232,
+      1043,
+      0.0067186240257995165,
+      596
+    ],
+    "right_xy_cost_current_vertices": [
+      1049,
+      768,
+      0.0067186240257995165,
+      596
+    ],
+    "same_numeric_cost": true,
+    "same_vertex_count": true
+  }
+]

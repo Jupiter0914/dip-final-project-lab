@@ -1,0 +1,9 @@
+{
+  "id": "Bengal_148",
+  "k": 32,
+  "all_joint_evaluations": 1244760,
+  "donor_edge_groups": 960,
+  "single_slots": 1024,
+  "identical_group_minima_and_counts": true,
+  "identical_reported_joint_polygon": true
+}

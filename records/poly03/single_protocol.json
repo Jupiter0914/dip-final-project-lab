@@ -1,0 +1,23 @@
+{
+  "name": "POLY03 single-ring development exploration",
+  "input": "The 36 original POLY02 Oxford dev source masks only; standardized single exterior and original geometry BF2 floor. No fresh confirmation data.",
+  "k": [
+    16,
+    32
+  ],
+  "directions": "Eight lattice directions, radii 1,2,4,8; cycle order as listed. Projection ties stable.",
+  "quota": "64*K post-initialization complete raster XOR scorings including all isolated ranking trials and multi-start perturbation assessments. Noneligible candidates and BF2/legality work recorded separately. At most 16*K XOR scorings per pair batch (including ordering on a new state).",
+  "time": "Separate real-time run on first hash-ranked image in each of 12 dev breeds, K16/32. Fixed extra search ceilings 120/220 ms measured from just after common initialization, including all guide construction, enumeration, validations at the accepted decision. Initial processing and POL1 serialization independently measured each time. Record actual overrun. At most one atomic or point-batch may complete at expiry.",
+  "seeds": [
+    1703,
+    2909,
+    4231
+  ],
+  "reduction": "Average all three seeds within source-method-K, then average K values within source. Positive gain is fewer XOR errors. Matched comparisons also report IoU and held-out BF1/BF3. 10000 paired source bootstrap resamples, seed 31009.",
+  "candidates": "Assign every observed native contour coordinate to the nearest current segment. Split its interior into four equal projection bins, propose in each nonempty bin the source pixel farthest from the segment. Candidates common to random, geometry and raster rankings. Full K candidate is scored after deleting a nonincident vertex and inserting the proposal. Only strict full-image XOR improvements with simplicity and fixed BF2 are accepted.",
+  "guides": "Raster ranks by full unguarded K-1/K+1 XOR effect; geometry ranks by changes in point-to-segment squared distances for curve points assigned to affected segments. These isolated scores order proposals. Acceptance uses the actual combined polygon, never their sum. Random uses the same complete pool in seeded random order.",
+  "controls": "Incumbent; continued single-vertex descent; three-start point descent with incumbent retained and jittered starts (including worse XOR if feasible); random/geometry/raster atomic moves. All start from original POLY02 protected output; no point polishing after a pair.",
+  "stagnation": "One preselected hash-first source per original dev breed at both K. Continue complete single-vertex cycles until no improving legal move in all 8 directions at radii 1/2/4/8, cycle cap 20 reported unresolved. Then apply raster-guided atomic neighborhood with same floor, allow worsening intermediate deletion and measure final result. Save first lexicographic true escape as recheckable witness.",
+  "decision": "Keep an operator as a candidate only when useful beyond longer point descent at equal resources. Attribute a special role to raster ranking only when comparable baselines do not explain the benefit. Development intervals remain descriptive.",
+  "hash_order": "sha256('poly03-single|' + source id)"
+}

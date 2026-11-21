@@ -1,0 +1,4 @@
+reason,id,k,x,y,side,measures
+branch,Sphynx_103,16,306,283,27,"{""geometry"": {""terminal_lost"": 0, ""flank_fn"": 56}, ""post_guard"": {""terminal_lost"": 13, ""flank_fn"": 84}, ""global_skeleton"": {""terminal_lost"": 3, ""flank_fn"": 64}, ""site_skeleton"": {""terminal_lost"": 0, ""flank_fn"": 60}}"
+notch,shiba_inu_147,16,185,361,33,"{""geometry"": {""notch_fp"": 287}, ""post_guard"": {""notch_fp"": 318}, ""global_skeleton"": {""notch_fp"": 321}, ""site_skeleton"": {""notch_fp"": 321}}"
+neck,British_Shorthair_187,16,0,267,162,"{""geometry"": {""max_supported_radius"": 4, ""radius_shown"": 4}, ""post_guard"": {""max_supported_radius"": 1, ""radius_shown"": 4}, ""global_skeleton"": {""max_supported_radius"": 1, ""radius_shown"": 4}, ""site_skeleton"": {""max_supported_radius"": 1, ""radius_shown"": 4}}"

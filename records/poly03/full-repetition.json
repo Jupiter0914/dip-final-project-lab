@@ -1,0 +1,8 @@
+{
+  "settings_with_methods": 980,
+  "noncgal_statuses_and_payloads_match": true,
+  "all_atomic_trajectories_match": true,
+  "all_allocation_diagnostics_match": true,
+  "first_run_retained": true,
+  "second_run": "complete raw-to-byte path includes full-canvas scratch allocation; CGAL variations retained"
+}

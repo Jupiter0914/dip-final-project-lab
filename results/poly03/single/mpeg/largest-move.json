@@ -1,0 +1,23 @@
+{
+  "id": "device5-9",
+  "k": 16,
+  "donor": 15,
+  "edge": 12,
+  "old_x": 87,
+  "old_y": 130,
+  "new_x": 21,
+  "new_y": 87,
+  "before_xor": 824,
+  "deletion_only_xor": 825,
+  "insertion_only_xor": 785,
+  "after_xor": 786,
+  "saved": 38,
+  "floor": 0.7700261964588608,
+  "after_bf2": 0.8133895956669606,
+  "before_sha": "bfeb5b04e4832d614da73327f27e65b74ca55d3cfa14925c138530f0fd10caf3",
+  "after_sha": "a409e3256bd3aac9c594de844fd7ef47f5580a26a828e4f0c401483089fcf7a4",
+  "certified_slots": 512,
+  "floor_numerator": 792176,
+  "floor_denominator": 1028765,
+  "remaining_eligible_point_moves": 0
+}

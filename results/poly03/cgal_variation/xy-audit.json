@@ -1,0 +1,20 @@
+{
+  "eligible_conditions": 190,
+  "runs": 1140,
+  "seeds": [
+    7,
+    47
+  ],
+  "repeats_per_process": 3,
+  "distinct_output_files": 190,
+  "file_variation_conditions": 0,
+  "trace_variation_conditions": 0,
+  "different_ring_order_conditions": 142,
+  "other_original_format_conditions": 6,
+  "archive_members": 190,
+  "archive_bytes": 81947,
+  "archive_sha256": "9ae63d9d14e75784e7c8e450ed0ecc11228ef906718c92f37b2298bcefce1820",
+  "production_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+  "diagnostic_worker_sha256": "9193d08f8ceb1996c2a1d263647dd1e9d8ab399af44a44738820ecc04b98eeb2",
+  "upstream_header_sha256": "15b5227967929fcebb31dfb39da0adbca6e78b49e6baa25c725da006c62c4661"
+}

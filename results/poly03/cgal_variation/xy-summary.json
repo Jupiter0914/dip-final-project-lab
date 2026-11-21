@@ -1,0 +1,14 @@
+{
+  "eligible_conditions": 190,
+  "runs": 1140,
+  "seeds": [
+    7,
+    47
+  ],
+  "repeats_per_process": 3,
+  "distinct_output_files": 190,
+  "file_variation_conditions": 0,
+  "trace_variation_conditions": 0,
+  "different_ring_order_conditions": 142,
+  "other_original_format_conditions": 6
+}

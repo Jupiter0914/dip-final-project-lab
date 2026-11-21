@@ -1,0 +1,3 @@
+-r ../poly02/requirements.txt
+contourpy==1.3.3
+shapely==2.1.2

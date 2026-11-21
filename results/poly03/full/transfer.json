@@ -1,0 +1,34 @@
+{
+  "id": "shiba_inu_142",
+  "budget": 128,
+  "bytes": 126,
+  "counts_before": [
+    10,
+    4,
+    8,
+    3
+  ],
+  "counts_after": [
+    11,
+    4,
+    7,
+    3
+  ],
+  "foreground": "4",
+  "holes": "0",
+  "selection": "largest strict cross-ring move",
+  "method": "exchange_whole",
+  "round": 1,
+  "donor": 2,
+  "donor_vertex": 0,
+  "receiver": 0,
+  "receiver_edge": 4,
+  "insert": [
+    869,
+    1020
+  ],
+  "before": 6008,
+  "after": 5540,
+  "add_before": 6008,
+  "add_after": 5540
+}

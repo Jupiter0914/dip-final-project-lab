@@ -1,0 +1,4 @@
+reason,id,budget,baseline,method,base_status,status,bytes_attempt,file_bytes,reference_fg,reference_holes,base_fg,base_holes,xor_attempt,xor,crop_x,crop_y,crop_side
+典型改善,miniature_pinscher_46,256,feasible_add,exchange_whole,success,success,254,254,2,0,2,0,218,191,186,204,93
+整图重排无收益,havanese_26,128,feasible_add,allocation_whole,success,success,126,126,1,1,1,1,1288,1288,98,322,83
+原分配丢失结构,basset_hound_75,256,independent_dp,feasible_add,search_no_valid_output,success,254,254,3,0,4,0,1106,1140,121,37,95

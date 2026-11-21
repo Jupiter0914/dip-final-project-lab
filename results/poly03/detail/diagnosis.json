@@ -1,0 +1,86 @@
+{
+  "branches_eligible": {
+    "sources": 22,
+    "groups": 11,
+    "settings": 44,
+    "k16": 22,
+    "k32": 22
+  },
+  "branch_long_loss": {
+    "sources": 3,
+    "groups": 3,
+    "settings": 3,
+    "k16": 2,
+    "k32": 1
+  },
+  "contiguous_skeleton_loss": {
+    "sources": 9,
+    "groups": 6,
+    "settings": 10,
+    "k16": 9,
+    "k32": 1
+  },
+  "notches_eligible": {
+    "sources": 9,
+    "groups": 6,
+    "settings": 18,
+    "k16": 9,
+    "k32": 9
+  },
+  "notches_net4": {
+    "sources": 3,
+    "groups": 3,
+    "settings": 4,
+    "k16": 2,
+    "k32": 2
+  },
+  "necks_eligible": {
+    "sources": 8,
+    "groups": 6,
+    "settings": 16,
+    "k16": 8,
+    "k32": 8
+  },
+  "necks_thinner": {
+    "sources": 4,
+    "groups": 4,
+    "settings": 5,
+    "k16": 3,
+    "k32": 2
+  },
+  "necks_broken": {
+    "sources": 0,
+    "groups": 0,
+    "settings": 0,
+    "k16": 0,
+    "k32": 0
+  },
+  "anchor_loss": {
+    "sources": 0,
+    "groups": 0,
+    "settings": 0,
+    "k16": 0,
+    "k32": 0
+  },
+  "tile_loss": {
+    "sources": 26,
+    "groups": 12,
+    "settings": 31,
+    "k16": 26,
+    "k32": 5
+  },
+  "scale_fixed_loss": {
+    "sources": 19,
+    "groups": 11,
+    "settings": 22,
+    "k16": 4,
+    "k32": 18
+  },
+  "scale_relative_loss": {
+    "sources": 7,
+    "groups": 7,
+    "settings": 7,
+    "k16": 5,
+    "k32": 2
+  }
+}

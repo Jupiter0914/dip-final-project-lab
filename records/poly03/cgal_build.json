@@ -1,0 +1,28 @@
+{
+  "package": "libcgal-dev_5.4-1_amd64.deb",
+  "sha256": "bd5df93cf2bee4be40899890f70fd37c2e04cdc0541aaa4952bd1d6258db5726",
+  "ubuntu_release": "22.04",
+  "source_sha256": "64296096cd74d38de249caf44a2d0bc0843595bdaf9e78dcecd7db361c4c514c",
+  "binary_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "dependency_versions": [
+    "libboost-dev:amd64\t1.74.0.3ubuntu7",
+    "libgmp-dev:amd64\t2:6.2.1+dfsg-3ubuntu1",
+    "libmpfr-dev:amd64\t4.1.0-3build3"
+  ],
+  "compiler_arguments": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-DNDEBUG",
+    "-frounding-math",
+    "-I/tmp/dip-poly03-cgal-5.4-bd5df93c/usr/include",
+    "/mnt/e/dip-final-project-lab/poly03/cgal_worker.cpp",
+    "-lgmp",
+    "-lmpfr",
+    "-o",
+    "/mnt/e/dip-final-project-lab/local/poly03/cgal/cgal_worker"
+  ],
+  "upstream": "CGAL::Polyline_simplification_2::simplify",
+  "wsl": "Ubuntu-22.04"
+}

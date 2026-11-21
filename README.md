@@ -1,5 +1,7 @@
 # 固定顶点预算下基于回填误差的二值外轮廓多边形编码
 
+> **当前分支 POLY03-EXPLORE**　[开发结论与淘汰决定](report/poly03/review.md) · [真实实例与运行入口](report/poly03/README.md) · [新确认计划](records/poly03/next-confirmation.md)。以下正文保留此前 POLY02 与 v1 的交接。
+
 > **本轮主控审核 POLY02**　[结论与反例](report/poly02/review.md) · [代码、演示和复算入口](report/poly02/README.md) · [冻结协议](records/poly02/freeze.md)。以下正文保留 v1 的实验与交付记录。
 
 标注编辑器常把一块现成的前景蒙版导出成可以拖动顶点的多边形。传统简化按轮廓到直线的距离挑点。这里用同样多的顶点，把结果填回原尺寸，直接数多填和漏填的像素，再移动顶点。输出包含宽、高、顶点数和全部坐标，16 点文件 74 字节，32 点文件 138 字节。

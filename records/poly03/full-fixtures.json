@@ -1,0 +1,483 @@
+{
+  "exhaustive_3x3": 512,
+  "unsupported_fixture": "outside_coordinate_or_implementation_canvas_limit",
+  "same_counts_wrong_fg": "digital_overlap",
+  "same_counts_wrong_hole": "digital_overlap",
+  "sources": [
+    {
+      "id": "empty",
+      "rings": 0,
+      "parents": [],
+      "vertices": 0,
+      "bytes": 10,
+      "xor": 0
+    },
+    {
+      "id": "full",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 8,
+      "bytes": 46,
+      "xor": 0
+    },
+    {
+      "id": "one_border_pixel",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 4,
+      "bytes": 30,
+      "xor": 0
+    },
+    {
+      "id": "corner_touch",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 4,
+      "bytes": 30,
+      "xor": 0
+    },
+    {
+      "id": "one_pixel_hole",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 12,
+      "bytes": 66,
+      "xor": 0
+    },
+    {
+      "id": "island_in_hole",
+      "rings": 3,
+      "parents": [
+        -1,
+        0,
+        1
+      ],
+      "vertices": 24,
+      "bytes": 118,
+      "xor": 0
+    },
+    {
+      "id": "diagonal_neck",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 16,
+      "bytes": 78,
+      "xor": 0
+    },
+    {
+      "id": "near_components",
+      "rings": 2,
+      "parents": [
+        -1,
+        -1
+      ],
+      "vertices": 16,
+      "bytes": 82,
+      "xor": 0
+    },
+    {
+      "id": "havanese_26",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 472,
+      "bytes": 1906,
+      "xor": 0
+    },
+    {
+      "id": "basset_hound_75",
+      "rings": 3,
+      "parents": [
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 546,
+      "bytes": 2206,
+      "xor": 0
+    },
+    {
+      "id": "Egyptian_Mau_77",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 408,
+      "bytes": 1650,
+      "xor": 0
+    },
+    {
+      "id": "scottish_terrier_199",
+      "rings": 3,
+      "parents": [
+        -1,
+        0,
+        0
+      ],
+      "vertices": 618,
+      "bytes": 2494,
+      "xor": 0
+    },
+    {
+      "id": "german_shorthaired_4",
+      "rings": 3,
+      "parents": [
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 340,
+      "bytes": 1382,
+      "xor": 0
+    },
+    {
+      "id": "jar-13",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 173,
+      "bytes": 710,
+      "xor": 0
+    },
+    {
+      "id": "pocket-14",
+      "rings": 28,
+      "parents": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vertices": 350,
+      "bytes": 1522,
+      "xor": 0
+    },
+    {
+      "id": "turtle-3",
+      "rings": 14,
+      "parents": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vertices": 260,
+      "bytes": 1106,
+      "xor": 0
+    },
+    {
+      "id": "boxer_43",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 782,
+      "bytes": 3146,
+      "xor": 0
+    },
+    {
+      "id": "saint_bernard_72",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 454,
+      "bytes": 1834,
+      "xor": 0
+    },
+    {
+      "id": "Russian_Blue_244",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 309,
+      "bytes": 1254,
+      "xor": 0
+    },
+    {
+      "id": "leonberger_88",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 569,
+      "bytes": 2294,
+      "xor": 0
+    },
+    {
+      "id": "american_pit_bull_terrier_148",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 482,
+      "bytes": 1946,
+      "xor": 0
+    },
+    {
+      "id": "yorkshire_terrier_106",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 565,
+      "bytes": 2278,
+      "xor": 0
+    },
+    {
+      "id": "havanese_3",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 732,
+      "bytes": 2946,
+      "xor": 0
+    },
+    {
+      "id": "great_pyrenees_60",
+      "rings": 2,
+      "parents": [
+        -1,
+        0
+      ],
+      "vertices": 355,
+      "bytes": 1438,
+      "xor": 0
+    },
+    {
+      "id": "havanese_88",
+      "rings": 4,
+      "parents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 390,
+      "bytes": 1586,
+      "xor": 0
+    },
+    {
+      "id": "beagle_43",
+      "rings": 4,
+      "parents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 462,
+      "bytes": 1874,
+      "xor": 0
+    },
+    {
+      "id": "boxer_79",
+      "rings": 2,
+      "parents": [
+        -1,
+        -1
+      ],
+      "vertices": 388,
+      "bytes": 1570,
+      "xor": 0
+    },
+    {
+      "id": "shiba_inu_142",
+      "rings": 4,
+      "parents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 601,
+      "bytes": 2430,
+      "xor": 0
+    },
+    {
+      "id": "beagle_34",
+      "rings": 4,
+      "parents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "vertices": 621,
+      "bytes": 2510,
+      "xor": 0
+    },
+    {
+      "id": "miniature_pinscher_46",
+      "rings": 2,
+      "parents": [
+        -1,
+        -1
+      ],
+      "vertices": 291,
+      "bytes": 1182,
+      "xor": 0
+    },
+    {
+      "id": "german_shorthaired_195",
+      "rings": 2,
+      "parents": [
+        -1,
+        -1
+      ],
+      "vertices": 522,
+      "bytes": 2106,
+      "xor": 0
+    },
+    {
+      "id": "saint_bernard_71",
+      "rings": 2,
+      "parents": [
+        -1,
+        -1
+      ],
+      "vertices": 559,
+      "bytes": 2254,
+      "xor": 0
+    },
+    {
+      "id": "english_setter_194",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 155,
+      "bytes": 634,
+      "xor": 0
+    },
+    {
+      "id": "boxer_194",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 480,
+      "bytes": 1934,
+      "xor": 0
+    },
+    {
+      "id": "beagle_199",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 448,
+      "bytes": 1806,
+      "xor": 0
+    },
+    {
+      "id": "Bengal_148",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 241,
+      "bytes": 978,
+      "xor": 0
+    },
+    {
+      "id": "english_setter_53",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 354,
+      "bytes": 1430,
+      "xor": 0
+    },
+    {
+      "id": "children-15",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 49,
+      "bytes": 210,
+      "xor": 0
+    },
+    {
+      "id": "face-13",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 88,
+      "bytes": 366,
+      "xor": 0
+    },
+    {
+      "id": "carriage-01",
+      "rings": 1,
+      "parents": [
+        -1
+      ],
+      "vertices": 89,
+      "bytes": 370,
+      "xor": 0
+    }
+  ]
+}

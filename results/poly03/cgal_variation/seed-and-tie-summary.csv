@@ -1,0 +1,17 @@
+cost,policy,seed,n,ring_orders,pop_traces,output_files,min_xor,max_xor,digital_success
+squared,upstream,default,10,4,4,4,4450,4896,6
+squared,upstream,7,10,5,5,5,4376,4896,4
+squared,upstream,47,10,4,4,4,4376,4896,6
+squared,upstream,all,30,5,5,5,4376,4896,16
+squared,xy,default,10,2,1,1,4359,4359,10
+squared,xy,7,10,2,1,1,4359,4359,10
+squared,xy,47,10,2,1,1,4359,4359,10
+squared,xy,all,30,2,1,1,4359,4359,30
+scaled,upstream,default,10,3,3,3,8392,8779,0
+scaled,upstream,7,10,3,3,3,8392,8779,0
+scaled,upstream,47,10,3,3,3,8392,8779,0
+scaled,upstream,all,30,3,3,3,8392,8779,0
+scaled,xy,default,10,3,1,1,9415,9415,0
+scaled,xy,7,10,3,1,1,9415,9415,0
+scaled,xy,47,10,3,1,1,9415,9415,0
+scaled,xy,all,30,3,1,1,9415,9415,0

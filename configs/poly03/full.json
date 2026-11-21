@@ -1,0 +1,22 @@
+{
+  "budgets": [
+    128,
+    256,
+    512
+  ],
+  "extra_rich_budget": 1024,
+  "rich_min_regions": 8,
+  "allocation_pool": 40,
+  "exchange_rounds": 2,
+  "final_pairs_per_round": 24,
+  "donor_shortlist": 5,
+  "receiver_shortlist": 10,
+  "transfer_steps": [
+    1,
+    2,
+    4
+  ],
+  "source_unit": "original known mask",
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 30621
+}

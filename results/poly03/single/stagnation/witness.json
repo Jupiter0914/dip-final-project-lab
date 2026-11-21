@@ -1,0 +1,9 @@
+{
+  "first_escape": null,
+  "first_no_gain": {
+    "id": "Bengal_187",
+    "k": 16,
+    "stationary_xor": 1287,
+    "quota": 1024
+  }
+}

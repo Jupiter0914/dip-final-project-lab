@@ -1,0 +1,17 @@
+{
+  "clean_sources": [
+    "poly03/cgal_worker.cpp",
+    "poly03/cgal_build.py",
+    "poly03/cgal_bridge.py",
+    "poly03/cgal_check.py",
+    "src/codec.py",
+    "src/__init__.py"
+  ],
+  "online_fetch_sha256": "bd5df93cf2bee4be40899890f70fd37c2e04cdc0541aaa4952bd1d6258db5726",
+  "native_worker_source_identity": true,
+  "original_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+  "rebuild_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+  "fixture_rows": 20,
+  "native_calls": 16,
+  "budget_statuses_and_nesting_reverified": true
+}

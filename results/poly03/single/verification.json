@@ -1,0 +1,27 @@
+{
+  "source_contents": 46,
+  "oxford_photos": 36,
+  "known_mpeg_shapes": 10,
+  "observed_mpeg_winners": 7,
+  "mpeg_escape": {
+    "id": "Bone-7",
+    "k": 32,
+    "before": 15,
+    "after": 12,
+    "single_neighbors": 1024,
+    "strict_escape": true
+  },
+  "zip_polygons": 1192,
+  "evaluated_rows": 1076,
+  "all_saved_scores_independently_verified": true,
+  "positive_control": [
+    29,
+    34,
+    5
+  ],
+  "strong_witness_id": "Bengal_148",
+  "strong_witness_k": 32,
+  "strong_joint_candidates": 1244760,
+  "joint_raw_improvements": 0,
+  "joint_bf2_improvements": 0
+}

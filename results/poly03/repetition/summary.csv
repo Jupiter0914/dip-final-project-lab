@@ -1,0 +1,11 @@
+method,settings,success1,success2,different_payloads,status_changes,common_ok,mean_abs_iou_difference_pp
+allocation_whole,98,93,93,0,0,93,0.0
+cgal_scaled,98,89,89,44,0,89,0.9915231313020623
+cgal_squared,98,88,87,41,1,87,0.03697103104615844
+exchange_add,98,93,93,0,0,93,0.0
+exchange_cross,98,93,93,0,0,93,0.0
+exchange_whole,98,93,93,0,0,93,0.0
+exchange_within,98,93,93,0,0,93,0.0
+feasible_add,98,93,93,0,0,93,0.0
+independent_dp,98,89,89,0,0,89,0.0
+perimeter,98,85,85,0,0,85,0.0

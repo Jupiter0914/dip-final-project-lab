@@ -17,3 +17,7 @@ A《固定顶点预算下基于回填误差的二值外轮廓多边形编码》�
 ## 2026-11-21　POLY02
 
 36 张开发、200 张新 Oxford 和 70 个 MPEG-7 类别均已完成，原作者 MATLAB 已复现。新的冻结、结论、运行命令和可恢复状态见 [POLY02 进度](poly02/progress.md) 与 [审核说明](../report/poly02/review.md)。
+
+## POLY03-EXPLORE
+
+独立探索分支已完成完整蒙版、原子删插与细部诊断的开发试验，未运行新的确认集。[四项结论与去留](../report/poly03/review.md) · [工作记录](poly03/progress.md) · [可运行及复算入口](../report/poly03/README.md)。

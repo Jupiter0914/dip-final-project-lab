@@ -1,0 +1,23 @@
+{
+  "sources": 32,
+  "rows": 980,
+  "wall_s": 45.79171650018543,
+  "budgets": [
+    128,
+    256,
+    512
+  ],
+  "methods": [
+    "perimeter",
+    "independent_dp",
+    "feasible_add",
+    "allocation_whole",
+    "cgal_squared",
+    "cgal_scaled",
+    "exchange_within",
+    "exchange_cross",
+    "exchange_add",
+    "exchange_whole"
+  ],
+  "pool_evaluations": 2132
+}

@@ -2,3 +2,5 @@
 *.png binary
 *.poly binary
 *.zip binary
+
+*.pm3 binary

@@ -1,0 +1,8 @@
+{
+  "sources": 32,
+  "scored_rows": 6207,
+  "unique_paths": 1587,
+  "unique_source_and_bytes": 792,
+  "independent_allocation_candidates": 2132,
+  "exhaustive_k_best_fixture": 44
+}

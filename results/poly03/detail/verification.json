@@ -1,0 +1,18 @@
+{
+  "decoded_outputs": 504,
+  "old_geometry_free_bf2_byte_matches": 216,
+  "originals": 36,
+  "record_sets": [
+    "36 Oxford trainval x K16/32"
+  ],
+  "method_count": 7,
+  "scoring": "Independent POLY02 numpy masks, independent Euclidean distances vs exact disk dilation",
+  "protected_sites_redecoded": true,
+  "synthetic_neck": {
+    "initial": 2,
+    "cut": -1
+  },
+  "fresh_case_refits": 7,
+  "independent_flank_dilation": true,
+  "independent_neck_clearance": "SciPy EDT + 8-connected component labels"
+}
