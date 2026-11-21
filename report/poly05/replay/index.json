@@ -1,0 +1,723 @@
+{
+  "cases": [
+    {
+      "id": "Egyptian_Mau_46",
+      "dataset": "Oxford",
+      "title": "典型改善",
+      "why": "取最接近正改善源中位数的源，再取最接近该源均值的共同重复。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "typical_positive",
+      "source_mean": 4.5,
+      "common": 6,
+      "crop": [
+        376,
+        131,
+        128
+      ],
+      "width": 576,
+      "height": 384,
+      "source_file": "evidence/Egyptian_Mau_46.png",
+      "raw_sha256": "9f0d8c12b88252e7f4cf675f82b82aee063e86f3ef86343014e9ae3205d95442",
+      "pixel_sha256": "0931e2caef55238f74cf165106faaf7965e218ccb34d038e70f48bcf8c862712",
+      "raw": "media/Egyptian_Mau_46-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "2ca3f3f3b6e8b57ed7ca5bd026a1d7d495530dcd0a35d32647a9a651feae8455",
+          "pm31": "evidence/2ca3f3f3b6e8b57ed7ca5bd026a1d7d495530dcd0a35d32647a9a651feae8455.pm3",
+          "round": 2,
+          "size": 254,
+          "ring_points": [
+            52,
+            7
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 244,
+          "fn": 69,
+          "xor": 313,
+          "iou": 0.9845011141371627,
+          "serialized_ms": 96.7236,
+          "dispatch_ms": 96.7259,
+          "delivered_ms": 96.7265,
+          "search_end_ms": 223.8019,
+          "end_ms": 224.1288,
+          "mask": "media/Egyptian_Mau_46-within_full.png",
+          "errors": "media/Egyptian_Mau_46-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "2ca3f3f3b6e8b57ed7ca5bd026a1d7d495530dcd0a35d32647a9a651feae8455",
+          "pm31": "evidence/2ca3f3f3b6e8b57ed7ca5bd026a1d7d495530dcd0a35d32647a9a651feae8455.pm3",
+          "round": 2,
+          "size": 254,
+          "ring_points": [
+            52,
+            7
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 244,
+          "fn": 69,
+          "xor": 313,
+          "iou": 0.9845011141371627,
+          "serialized_ms": 92.108,
+          "dispatch_ms": 92.1114,
+          "delivered_ms": 92.1126,
+          "search_end_ms": 222.4741,
+          "end_ms": 222.8241,
+          "mask": "media/Egyptian_Mau_46-cross.png",
+          "errors": "media/Egyptian_Mau_46-cross-errors.png"
+        }
+      },
+      "repeat_delta": 0
+    },
+    {
+      "id": "Abyssinian_3",
+      "dataset": "Oxford",
+      "title": "持平",
+      "why": "取源均值最接近零的源，再取最接近该源均值的共同重复。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "nearest_zero",
+      "source_mean": 0.0,
+      "common": 6,
+      "crop": [
+        205,
+        120,
+        200
+      ],
+      "width": 600,
+      "height": 869,
+      "source_file": "evidence/Abyssinian_3.png",
+      "raw_sha256": "25e36efb90c5c3f39705df163b28a83791bd4b06921425adef2a01db04a012f5",
+      "pixel_sha256": "f3a8d0edb054e382f4a328a2fa819afa06905b5a989e4b07569b75c31ee8a9ee",
+      "raw": "media/Abyssinian_3-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "13617c5144b70fa743a4d82612bfa4de194e93311c20abaa03b53fd41bc9b499",
+          "pm31": "evidence/13617c5144b70fa743a4d82612bfa4de194e93311c20abaa03b53fd41bc9b499.pm3",
+          "round": 0,
+          "size": 254,
+          "ring_points": [
+            55,
+            4
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 966,
+          "fn": 271,
+          "xor": 1237,
+          "iou": 0.9783850844851386,
+          "serialized_ms": 55.1998,
+          "dispatch_ms": 55.2043,
+          "delivered_ms": 55.2058,
+          "search_end_ms": 237.2803,
+          "end_ms": 237.7708,
+          "mask": "media/Abyssinian_3-within_full.png",
+          "errors": "media/Abyssinian_3-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "13617c5144b70fa743a4d82612bfa4de194e93311c20abaa03b53fd41bc9b499",
+          "pm31": "evidence/13617c5144b70fa743a4d82612bfa4de194e93311c20abaa03b53fd41bc9b499.pm3",
+          "round": 0,
+          "size": 254,
+          "ring_points": [
+            55,
+            4
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 966,
+          "fn": 271,
+          "xor": 1237,
+          "iou": 0.9783850844851386,
+          "serialized_ms": 56.0781,
+          "dispatch_ms": 56.0831,
+          "delivered_ms": 56.0857,
+          "search_end_ms": 244.3814,
+          "end_ms": 244.84,
+          "mask": "media/Abyssinian_3-cross.png",
+          "errors": "media/Abyssinian_3-cross-errors.png"
+        }
+      },
+      "repeat_delta": 0
+    },
+    {
+      "id": "miniature_pinscher_61",
+      "dataset": "Oxford",
+      "title": "最差退化",
+      "why": "取源均值最小的源，再取最接近该源均值的共同重复。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "worst",
+      "source_mean": -27.5,
+      "common": 6,
+      "crop": [
+        94,
+        328,
+        125
+      ],
+      "width": 375,
+      "height": 500,
+      "source_file": "evidence/miniature_pinscher_61.png",
+      "raw_sha256": "e6ac776256745e280a75f7be60438e14bdbd90f82e634eca9a329a7822726081",
+      "pixel_sha256": "8d8558c082f8d73f260485e85dd39031559bff2f91e36ad0a4b629465589df4d",
+      "raw": "media/miniature_pinscher_61-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "a9985027c21b5d9de6be31e67ee432c2a548471a5d12149c15637cf648b3c7f7",
+          "pm31": "evidence/a9985027c21b5d9de6be31e67ee432c2a548471a5d12149c15637cf648b3c7f7.pm3",
+          "round": 2,
+          "size": 254,
+          "ring_points": [
+            50,
+            4,
+            4
+          ],
+          "parents": [
+            -1,
+            0,
+            0
+          ],
+          "fp": 988,
+          "fn": 381,
+          "xor": 1369,
+          "iou": 0.9716275310356262,
+          "serialized_ms": 97.1017,
+          "dispatch_ms": 97.1038,
+          "delivered_ms": 97.1044,
+          "search_end_ms": 193.1321,
+          "end_ms": 193.4202,
+          "mask": "media/miniature_pinscher_61-within_full.png",
+          "errors": "media/miniature_pinscher_61-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "a17c35fd15ae4dc4ea562637fed45c2430c95f1da6e9d08244a19306e4106729",
+          "pm31": "evidence/a17c35fd15ae4dc4ea562637fed45c2430c95f1da6e9d08244a19306e4106729.pm3",
+          "round": 1,
+          "size": 254,
+          "ring_points": [
+            50,
+            4,
+            4
+          ],
+          "parents": [
+            -1,
+            0,
+            0
+          ],
+          "fp": 1051,
+          "fn": 351,
+          "xor": 1402,
+          "iou": 0.9709814960466946,
+          "serialized_ms": 66.1118,
+          "dispatch_ms": 66.116,
+          "delivered_ms": 66.1169,
+          "search_end_ms": 206.1817,
+          "end_ms": 206.4748,
+          "mask": "media/miniature_pinscher_61-cross.png",
+          "errors": "media/miniature_pinscher_61-cross-errors.png"
+        }
+      },
+      "repeat_delta": -33
+    },
+    {
+      "id": "chihuahua_41",
+      "dataset": "Oxford",
+      "title": "局部覆盖下降",
+      "why": "从已登记的局部冲突中取小部件覆盖下降的实际配对。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "structure_conflict",
+      "source_mean": 13.666666666666666,
+      "common": 6,
+      "crop": [
+        431,
+        46,
+        20
+      ],
+      "width": 500,
+      "height": 333,
+      "source_file": "evidence/chihuahua_41.png",
+      "raw_sha256": "8bd893d2cded8717bb04a5ef79f3869dc1984346efb8339759fa1082d3f837f6",
+      "pixel_sha256": "669c8e4e4e7e24e73c34008023551b9d835c4a7516acb94cc4a9d10ea0cd48c7",
+      "raw": "media/chihuahua_41-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "54720d730fd738fda2023a5cae1bc92f2c276ed9964d425fb41923e1c22a913f",
+          "pm31": "evidence/54720d730fd738fda2023a5cae1bc92f2c276ed9964d425fb41923e1c22a913f.pm3",
+          "round": 2,
+          "size": 254,
+          "ring_points": [
+            55,
+            4
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 464,
+          "fn": 191,
+          "xor": 655,
+          "iou": 0.9816310505356441,
+          "serialized_ms": 77.4348,
+          "dispatch_ms": 77.437,
+          "delivered_ms": 77.4375,
+          "search_end_ms": 186.0975,
+          "end_ms": 186.3413,
+          "mask": "media/chihuahua_41-within_full.png",
+          "errors": "media/chihuahua_41-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "11dd9c78402b5f06322b74ae372cbb1aee022b32bd15bea34cb31ead73f24d57",
+          "pm31": "evidence/11dd9c78402b5f06322b74ae372cbb1aee022b32bd15bea34cb31ead73f24d57.pm3",
+          "round": 2,
+          "size": 254,
+          "ring_points": [
+            56,
+            3
+          ],
+          "parents": [
+            -1,
+            -1
+          ],
+          "fp": 476,
+          "fn": 164,
+          "xor": 640,
+          "iou": 0.9820577516119989,
+          "serialized_ms": 73.7199,
+          "dispatch_ms": 73.7219,
+          "delivered_ms": 73.7223,
+          "search_end_ms": 206.9327,
+          "end_ms": 207.278,
+          "mask": "media/chihuahua_41-cross.png",
+          "errors": "media/chihuahua_41-cross-errors.png"
+        }
+      },
+      "repeat_delta": 15,
+      "region": {
+        "kind": "foreground",
+        "reference_id": 2,
+        "reference_area": 2,
+        "within_area": 2,
+        "cross_area": 1,
+        "within_recall": 1.0,
+        "cross_recall": 0.5
+      }
+    },
+    {
+      "id": "Robot055",
+      "dataset": "LEMS",
+      "title": "典型改善",
+      "why": "取最接近正改善源中位数的源，再取最接近该源均值的共同重复。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "typical_positive",
+      "source_mean": 3.0,
+      "common": 6,
+      "crop": [
+        4,
+        56,
+        37
+      ],
+      "width": 139,
+      "height": 113,
+      "source_file": "evidence/Robot055.gif",
+      "raw_sha256": "5e81fb23200b290bda692575d66b5d674db1d66d57d9b5160dc8c58dd6b752bf",
+      "pixel_sha256": "9c03e3d02bac30e8537074f5e1db00db3aee03987d1dd7b21de1f8a5931d6849",
+      "raw": "media/Robot055-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "434e16e0242f8b54855695aed170908bad332eda2f594e27eee402631f6c08df",
+          "pm31": "evidence/434e16e0242f8b54855695aed170908bad332eda2f594e27eee402631f6c08df.pm3",
+          "round": 8,
+          "size": 254,
+          "ring_points": [
+            50,
+            9
+          ],
+          "parents": [
+            -1,
+            0
+          ],
+          "fp": 199,
+          "fn": 159,
+          "xor": 358,
+          "iou": 0.9452431936371979,
+          "serialized_ms": 85.1215,
+          "dispatch_ms": 85.1232,
+          "delivered_ms": 85.1236,
+          "search_end_ms": 85.1247,
+          "end_ms": 85.2773,
+          "mask": "media/Robot055-within_full.png",
+          "errors": "media/Robot055-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "2f20253e640a9d76a7558eac2b909a8085ae40184930c09feef5e0b33b74c364",
+          "pm31": "evidence/2f20253e640a9d76a7558eac2b909a8085ae40184930c09feef5e0b33b74c364.pm3",
+          "round": 8,
+          "size": 254,
+          "ring_points": [
+            49,
+            10
+          ],
+          "parents": [
+            -1,
+            0
+          ],
+          "fp": 194,
+          "fn": 161,
+          "xor": 355,
+          "iou": 0.9456604928822899,
+          "serialized_ms": 86.1989,
+          "dispatch_ms": 86.2006,
+          "delivered_ms": 86.201,
+          "search_end_ms": 86.2023,
+          "end_ms": 86.3464,
+          "mask": "media/Robot055-cross.png",
+          "errors": "media/Robot055-cross-errors.png"
+        }
+      },
+      "repeat_delta": 3
+    },
+    {
+      "id": "FruitorVegetable041",
+      "dataset": "LEMS",
+      "title": "持平／最小源差",
+      "why": "按原选择规则，最接近零和源均值最小两项选到了同一源。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "nearest_zero+worst",
+      "source_mean": 0.0,
+      "common": 6,
+      "crop": [
+        66,
+        40,
+        41
+      ],
+      "width": 125,
+      "height": 128,
+      "source_file": "evidence/FruitorVegetable041.gif",
+      "raw_sha256": "fee17565b6bf0e366a61818ed133e1de3145634af8104f1405cfdfe1213d3948",
+      "pixel_sha256": "4b99a142d7dc42a73532f34e5fa303fb99450d960cfde48fbb9039f4c9d3e412",
+      "raw": "media/FruitorVegetable041-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "0a0c47541ba0df8429d5445e4eb4ceeb7dd02907572394c609996cee42490acf",
+          "pm31": "evidence/0a0c47541ba0df8429d5445e4eb4ceeb7dd02907572394c609996cee42490acf.pm3",
+          "round": 4,
+          "size": 254,
+          "ring_points": [
+            52,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            0,
+            0
+          ],
+          "fp": 134,
+          "fn": 82,
+          "xor": 216,
+          "iou": 0.9699666295884316,
+          "serialized_ms": 41.6143,
+          "dispatch_ms": 41.6158,
+          "delivered_ms": 41.6162,
+          "search_end_ms": 49.3288,
+          "end_ms": 49.3341,
+          "mask": "media/FruitorVegetable041-within_full.png",
+          "errors": "media/FruitorVegetable041-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "0a0c47541ba0df8429d5445e4eb4ceeb7dd02907572394c609996cee42490acf",
+          "pm31": "evidence/0a0c47541ba0df8429d5445e4eb4ceeb7dd02907572394c609996cee42490acf.pm3",
+          "round": 4,
+          "size": 254,
+          "ring_points": [
+            52,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            0,
+            0
+          ],
+          "fp": 134,
+          "fn": 82,
+          "xor": 216,
+          "iou": 0.9699666295884316,
+          "serialized_ms": 43.048,
+          "dispatch_ms": 43.0496,
+          "delivered_ms": 43.05,
+          "search_end_ms": 50.8576,
+          "end_ms": 50.8632,
+          "mask": "media/FruitorVegetable041-cross.png",
+          "errors": "media/FruitorVegetable041-cross-errors.png"
+        }
+      },
+      "repeat_delta": 0
+    },
+    {
+      "id": "Ragdoll_32",
+      "dataset": "Oxford",
+      "title": "最大改善",
+      "why": "附例取源均值最高的源，再取最接近该源均值的共同重复。",
+      "session": "S1",
+      "rep": "1",
+      "reason": "largest_supplement",
+      "source_mean": 54.0,
+      "common": 6,
+      "crop": [
+        91,
+        78,
+        125
+      ],
+      "width": 500,
+      "height": 375,
+      "source_file": "evidence/Ragdoll_32.png",
+      "raw_sha256": "ea564d5c8aabc3704f99a6898b888a7197eaeecc0969364557dc5503600df768",
+      "pixel_sha256": "561a07e14042416d5aaafd70a8034ac1bc8ed61539213306a12b8d537eb09935",
+      "raw": "media/Ragdoll_32-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "bca59001f880863096ecc42d854df10d61fe23b12b89fcf8ec6e18e5d08483e1",
+          "pm31": "evidence/bca59001f880863096ecc42d854df10d61fe23b12b89fcf8ec6e18e5d08483e1.pm3",
+          "round": 1,
+          "size": 254,
+          "ring_points": [
+            29,
+            7,
+            5,
+            4,
+            3,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "fp": 1173,
+          "fn": 616,
+          "xor": 1789,
+          "iou": 0.9724136867588781,
+          "serialized_ms": 82.7824,
+          "dispatch_ms": 82.7862,
+          "delivered_ms": 82.7875,
+          "search_end_ms": 143.3108,
+          "end_ms": 143.6781,
+          "mask": "media/Ragdoll_32-within_full.png",
+          "errors": "media/Ragdoll_32-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "284d379d6396980002a7dd1cee05ec58632c883a332cc9e86984175d65658d90",
+          "pm31": "evidence/284d379d6396980002a7dd1cee05ec58632c883a332cc9e86984175d65658d90.pm3",
+          "round": 1,
+          "size": 254,
+          "ring_points": [
+            30,
+            6,
+            5,
+            4,
+            3,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "fp": 1121,
+          "fn": 614,
+          "xor": 1735,
+          "iou": 0.9732248954459174,
+          "serialized_ms": 82.8921,
+          "dispatch_ms": 82.8962,
+          "delivered_ms": 82.8973,
+          "search_end_ms": 145.8357,
+          "end_ms": 146.169,
+          "mask": "media/Ragdoll_32-cross.png",
+          "errors": "media/Ragdoll_32-cross-errors.png"
+        }
+      },
+      "repeat_delta": 54
+    },
+    {
+      "id": "British_Shorthair_38",
+      "dataset": "Oxford",
+      "title": "共同孔缩水",
+      "why": "附例取已有面积比极小的有限孔与对应的实际重复。",
+      "session": "S2",
+      "rep": "2",
+      "reason": "absolute_structure",
+      "source_mean": 0.0,
+      "common": 1,
+      "crop": [
+        348,
+        88,
+        28
+      ],
+      "width": 500,
+      "height": 375,
+      "source_file": "evidence/British_Shorthair_38.png",
+      "raw_sha256": "b4197576d417a1a694d5790fe7948a2c1c1acd3ef1afb0339c24c76ba797a32e",
+      "pixel_sha256": "30c827950a5567d8e5bf131730d5b9c0b04b8884a2f015444a13c3b785a37daf",
+      "raw": "media/British_Shorthair_38-raw.png",
+      "methods": {
+        "within_full": {
+          "sha256": "5d7ebcb85d096bee5f5db7d4246c53b0d3a0ec2dfe6f118961a31dd11fc539c5",
+          "pm31": "evidence/5d7ebcb85d096bee5f5db7d4246c53b0d3a0ec2dfe6f118961a31dd11fc539c5.pm3",
+          "round": 0,
+          "size": 254,
+          "ring_points": [
+            26,
+            4,
+            3,
+            3,
+            4,
+            3,
+            3,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          "fp": 4602,
+          "fn": 1617,
+          "xor": 6219,
+          "iou": 0.8907701765170809,
+          "serialized_ms": 97.1443,
+          "dispatch_ms": 97.1486,
+          "delivered_ms": 97.1508,
+          "search_end_ms": 200.7879,
+          "end_ms": 201.2023,
+          "mask": "media/British_Shorthair_38-within_full.png",
+          "errors": "media/British_Shorthair_38-within_full-errors.png"
+        },
+        "cross": {
+          "sha256": "5d7ebcb85d096bee5f5db7d4246c53b0d3a0ec2dfe6f118961a31dd11fc539c5",
+          "pm31": "evidence/5d7ebcb85d096bee5f5db7d4246c53b0d3a0ec2dfe6f118961a31dd11fc539c5.pm3",
+          "round": 0,
+          "size": 254,
+          "ring_points": [
+            26,
+            4,
+            3,
+            3,
+            4,
+            3,
+            3,
+            3,
+            3
+          ],
+          "parents": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          "fp": 4602,
+          "fn": 1617,
+          "xor": 6219,
+          "iou": 0.8907701765170809,
+          "serialized_ms": 99.6452,
+          "dispatch_ms": 99.6496,
+          "delivered_ms": 99.651,
+          "search_end_ms": 201.6262,
+          "end_ms": 202.0157,
+          "mask": "media/British_Shorthair_38-cross.png",
+          "errors": "media/British_Shorthair_38-cross-errors.png"
+        }
+      },
+      "repeat_delta": 0,
+      "region": {
+        "kind": "hole",
+        "reference_id": 2,
+        "reference_area": 271,
+        "within_area": 96,
+        "cross_area": 96,
+        "within_recall": 0.35424354243542433,
+        "cross_recall": 0.35424354243542433
+      }
+    }
+  ],
+  "action": {
+    "id": "Ragdoll_32",
+    "session": "S1",
+    "rep": "1",
+    "donor": 1,
+    "receiver": 0,
+    "donor_vertex": 6,
+    "receiver_edge": 15,
+    "insert": [
+      803,
+      936
+    ],
+    "before": {
+      "sha256": "26afe570887013b86b8e3b6a1e9d7777a33e87aa84d4db5ec86fa9bc4cdf07bb",
+      "round": 0,
+      "size": 254,
+      "points": [
+        29,
+        7,
+        5,
+        4,
+        3,
+        3,
+        3
+      ],
+      "xor": 1827,
+      "received_ms": 45.5401
+    },
+    "after": {
+      "sha256": "284d379d6396980002a7dd1cee05ec58632c883a332cc9e86984175d65658d90",
+      "round": 1,
+      "size": 254,
+      "points": [
+        30,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3
+      ],
+      "xor": 1735,
+      "received_ms": 82.8973
+    }
+  }
+}

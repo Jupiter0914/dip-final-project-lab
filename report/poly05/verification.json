@@ -1,0 +1,185 @@
+{
+  "scientific_code_changed": false,
+  "base": "9c8ce11143dfb30e310965136616fe0addb5c1ef",
+  "freeze": "ff70458c06a8fd36e68f546a9b350510968dcddf",
+  "old_zip_sha256": "7dbe8d39e21c33d296e6d747cc253557b7bd3ccd58c9c7d58d7a1f25e4435785",
+  "reused_previous_clean_audit": {
+    "calls": 12168,
+    "sources": 300,
+    "new_scientific_calls": 0
+  },
+  "this_checkout": {
+    "facts": 233,
+    "raw_comparisons": 18,
+    "primary": {
+      "Oxford": {
+        "sources": 146,
+        "matched": 871,
+        "mean": 2.26027397260274,
+        "ci": [
+          0.635816210045662,
+          4.013727168949771
+        ]
+      },
+      "LEMS": {
+        "sources": 7,
+        "matched": 42,
+        "mean": 0.42857142857142855,
+        "ci": [
+          0.0,
+          1.2857142857142858
+        ]
+      }
+    },
+    "coverage": {
+      "Oxford/all/cross": [
+        1165,
+        1200
+      ],
+      "Oxford/all/within_full": [
+        1166,
+        1200
+      ],
+      "Oxford/R2+/cross": [
+        871,
+        900
+      ],
+      "Oxford/R2+/within_full": [
+        872,
+        900
+      ],
+      "LEMS/all/cross": [
+        528,
+        600
+      ],
+      "LEMS/all/within_full": [
+        528,
+        600
+      ],
+      "LEMS/R2+/cross": [
+        42,
+        60
+      ],
+      "LEMS/R2+/within_full": [
+        42,
+        60
+      ]
+    },
+    "replay_pairs": 8,
+    "distinct_example_files": 13,
+    "figures": 6,
+    "formula_svgs": 2,
+    "local_markdown_links": 106,
+    "unchanged_locked_git_blobs": 106,
+    "unchanged_working_byte_fingerprints": 107
+  },
+  "frozen_git_and_working_files": {
+    "locked_paths": 106,
+    "lockfile_additional": 1,
+    "byte_equal_to_old_zip_payload": 97,
+    "old_local_line_ending_variants": [
+      "configs/poly04/confirm.json",
+      "poly03/cgal_bridge.py",
+      "poly03/cgal_build.py",
+      "poly03/cgal_check.py",
+      "poly03/cgal_recheck.py",
+      "poly03/cgal_variation.py",
+      "poly03/cgal_xy_sensitivity.py",
+      "records/poly04/data-audit.json",
+      "records/samples.csv"
+    ],
+    "note": "Inherited physical line endings recorded separately. All 106 locked Git blobs agree at the science tag and review base. The 106 physical files and the lockfile match the working fingerprints before publication."
+  },
+  "browser": {
+    "browser": "157.0.4341.60",
+    "scheme": "file",
+    "network": "offline",
+    "cases": [
+      "Egyptian_Mau_46",
+      "Abyssinian_3",
+      "miniature_pinscher_61",
+      "chihuahua_41",
+      "Robot055",
+      "FruitorVegetable041",
+      "Ragdoll_32",
+      "British_Shorthair_38"
+    ],
+    "view_mode_checks": 32,
+    "figures": 6,
+    "formula_images": 2,
+    "reader_tables": 4,
+    "replay_platform_fonts": {
+      "#identity": [
+        "Times New Roman"
+      ],
+      "h1": [
+        "SimSun"
+      ],
+      "#average": [
+        "Times New Roman"
+      ]
+    },
+    "reader_platform_fonts": {
+      "tbody tr:first-child td:first-child": [
+        "Times New Roman",
+        "SimSun"
+      ],
+      "h1": [
+        "SimSun"
+      ]
+    },
+    "mobile_overflow": false,
+    "errors": []
+  },
+  "retained_decoder_smoke": {
+    "source": "Ragdoll_32",
+    "round": 1,
+    "source_sha256": "284d379d6396980002a7dd1cee05ec58632c883a332cc9e86984175d65658d90",
+    "pixel_disagreements_with_replay": 0
+  },
+  "local_course_files": [
+    {
+      "title": "Chapter 8 Image Compression",
+      "pdf_pages": [
+        5,
+        6,
+        7
+      ],
+      "footers": [
+        "5/39",
+        "6/53",
+        "7/36"
+      ],
+      "sha256": "28bad227377b81d710b4dbff77ecb3b365dc4ba0a2f939d3bc482d9adb62226d"
+    },
+    {
+      "title": "Chapter 9 Morphological Image Processing",
+      "pdf_pages": [
+        37,
+        38,
+        39,
+        40,
+        47
+      ],
+      "footers": [
+        "37/61",
+        "38/61",
+        "39/61",
+        "40/61",
+        "47/61"
+      ],
+      "sha256": "694b97d1492230258e283c0c8fac512d65301631bea006f200d874c1dc081789"
+    },
+    {
+      "title": "1 Digital Image Processing Using Matlab（英文）",
+      "pdf_pages": [
+        252
+      ],
+      "printed": [
+        438,
+        439
+      ],
+      "sha256": "81f97621e17671a80130e929d87c115059792b666a5d9882c0d69bf93b65933b"
+    }
+  ]
+}
