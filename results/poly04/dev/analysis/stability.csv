@@ -1,0 +1,11 @@
+dataset,budget,deadline_ms,method,baseline,analysis,n,mean,lo,hi
+MPEG7,256,100,cross,within_full,all_common,1,0.0,0.0,0.0
+MPEG7,256,100,cross,within_full,fully_paired_repeats,1,0.0,0.0,0.0
+MPEG7,256,100,cross,within_full,session/S1,1,0.0,0.0,0.0
+MPEG7,256,100,cross,within_full,session/S2,1,0.0,0.0,0.0
+MPEG7,256,100,cross,within_full,session/S3,1,0.0,0.0,0.0
+Oxford,256,100,cross,within_full,all_common,21,7.674603174603174,2.746031746031746,13.587499999999999
+Oxford,256,100,cross,within_full,fully_paired_repeats,21,7.674603174603174,2.746031746031746,13.587499999999999
+Oxford,256,100,cross,within_full,session/S1,21,7.9523809523809526,2.119047619047619,14.69047619047619
+Oxford,256,100,cross,within_full,session/S2,21,7.904761904761905,2.5,13.857142857142858
+Oxford,256,100,cross,within_full,session/S3,21,7.166666666666667,1.880952380952381,13.80952380952381

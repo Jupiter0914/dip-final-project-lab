@@ -16,6 +16,7 @@ from scipy import ndimage
 from .maskcodec import extract,Polygon,decode,length,Unsupported
 from .allocation import hierarchy
 from .repair import ordered_allocations
+from poly04.prepare import SUCCESS, UNSUPPORTED, BELOW, NO_OUTPUT, prepare_input
 from .full_data import ROOT,OUT,LOCAL,MANIFEST,REC
 from poly02.data import rows,read_mask
 
@@ -135,26 +136,47 @@ def identity(ref,mask):
 
 def check():
     masks={s["id"]:read_mask(s) for s in rows(MANIFEST)}
-    labels={k:components(m) for k,m in masks.items()}
-    dense={k:extract(m) for k,m in masks.items()}
+    # An unsupported input must carry its own recorded failure and no archived output.
+    # Keep only the evidence needed for replay, releasing per-source full-canvas scratch.
+    labels={}; dense={}; unsupported={}
+    for key,raw in masks.items():
+        prep=prepare_input(raw)
+        if prep.status==UNSUPPORTED:
+            unsupported[key]=prep.reason
+            continue
+        assert prep.status==SUCCESS
+        dense[key]=(prep.dense,prep.parents)
+        labels[key]=components(raw)
     for version in ("time_full","time_fair"):
         ch=rows(ROOT/f"results/poly03/{version}/checkpoints.csv")
         lut=defaultdict(list)
         for r in ch:lut[r["id"],r["rep"],r["method"]].append(r)
         for r in rows(ROOT/f"results/poly03/{version}/per_image.csv"):
-            eligible=[v for v in lut[r["id"],r["rep"],r["method"]] if float(v["ready_ms"])<=int(r["deadline_ms"])]
-            if eligible:assert r["status"]=="success" and r["blob_sha256"]==eligible[-1]["blob_sha256"]
-            else:assert r["status"]!="success"
+            name=r["id"]
+            eligible=[v for v in lut[name,r["rep"],r["method"]] if float(v["ready_ms"])<=int(r["deadline_ms"])]
+            if name in unsupported:
+                assert not eligible and r["status"]==UNSUPPORTED
+            elif int(r["budget"])<length(dense[name][1],3*len(dense[name][1])):
+                assert not eligible and r["status"]==BELOW
+            elif eligible:
+                assert r["status"]==SUCCESS and r["blob_sha256"]==eligible[-1]["blob_sha256"]
+            else:
+                assert r["status"] in (NO_OUTPUT,"not_ready")
     count=0;files=set();cache={}
     with zipfile.ZipFile(ARCHIVE) as z:
         assert z.testzip() is None
         for stage,r in read_records():
             name,_,digest=location(stage,r)
             raw=masks[r["id"]]
+            if r["id"] in unsupported:
+                assert name is None and r["status"]==UNSUPPORTED
+                if r.get("reason"): assert r["reason"]==unsupported[r["id"]]
+                continue
+            assert r.get("status")!=UNSUPPORTED
             rings0,parent=dense[r["id"]]
             if name is None:
                 if r["status"]=="below_proved_lower_bound":assert int(r["budget"])<10+16*len(parent)
-                else:assert r["status"] in ("search_no_valid_output","unsupported_representation")
+                else:assert r["status"]==NO_OUTPUT and int(r["budget"])>=10+16*len(parent)
                 continue
             blob=z.read(name);files.add(name)
             assert hashlib.sha256(blob).hexdigest()==digest
@@ -184,16 +206,17 @@ def check():
     by=defaultdict(list)
     for log in rows(OUT/"allocation_candidates.csv"): by[log["id"]].append(log)
     for name,group in by.items():
+        assert name not in unsupported
         mask=masks[name];rings,par=dense[name]
         full_masks=[paint(mask.shape,p) for p in rings]
-        counts=[tuple(map(int,r["counts"].split(","))) for r in group]
+        counts=[tuple(map(int,r["counts"].split(","))) if r["counts"] else () for r in group]
         wanted=[set(c[i] for c in counts) for i in range(len(rings))]
         banks=[{n:(p,paint(mask.shape,p)) for n,p in hierarchy(src,max(needed)) if n in needed}
                for src,needed in zip(rings,wanted)]
         for r,c in zip(group,counts):
             opts=[b[k] for b,k in zip(banks,c)]
             refsum=sum(int(np.count_nonzero(pred!=gold)) for (_,pred),gold in zip(opts,full_masks))
-            whole=np.logical_xor.reduce([p for _,p in opts],axis=0)
+            whole=np.logical_xor.reduce([p for _,p in opts],axis=0) if opts else np.zeros_like(mask)
             assert refsum==int(r["additive_xor"]) and int(np.count_nonzero(whole!=mask))==int(r["whole_xor"])
             assert expected_tree([v for v,_ in opts],par)==(r["vector"]=="ok")
             assert identity(labels[name],whole)==r["digital"]

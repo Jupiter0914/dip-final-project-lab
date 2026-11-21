@@ -1,0 +1,17 @@
+condition,method,rounds,median,min,max,under_24,under_24_nonzero,none,proposed,accepted,proposed_triangles,accepted_triangles,accepted_cross
+fixed2,within_old,59,24.0,0,24,15,14,1,1267,57,0,0,0
+fixed2,within_full_oldtri,59,24.0,0,24,1,0,1,1392,57,0,0,0
+fixed2,within_full,59,24.0,0,24,1,0,1,1392,57,0,0,0
+fixed2,cross_oldtri,59,24.0,0,24,1,0,1,1392,58,0,0,16
+fixed2,cross_full_oldtri,59,24.0,0,24,1,0,1,1392,58,0,0,16
+fixed2,cross,59,24.0,0,24,1,0,1,1392,58,0,0,16
+fixed2,exact,59,24.0,0,24,1,0,1,1392,58,0,0,16
+fixed2,cgal_within,59,24.0,0,24,1,0,1,1392,58,0,0,0
+time_run,within_old,1067,24.0,0,24,332,326,6,22775,996,0,0,0
+time_run,within_full_oldtri,1040,24.0,0,24,6,0,6,24816,959,0,0,0
+time_run,within_full,1039,24.0,0,24,6,0,6,24792,958,113,0,0
+time_run,cross_oldtri,1079,24.0,0,24,6,0,6,25752,1013,0,0,270
+time_run,cross_full_oldtri,1078,24.0,0,24,6,0,6,25728,1012,0,0,269
+time_run,cross,1082,24.0,0,24,6,0,6,25824,1015,66,0,270
+time_run,exact,1032,24.0,0,24,6,0,6,24624,974,66,0,253
+time_run,cgal_within,1191,24.0,0,24,6,0,6,28440,1154,106,0,0

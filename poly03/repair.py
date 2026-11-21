@@ -10,6 +10,7 @@ from .maskcodec import Renderer,extract,digital,correspondence,vector_ok,length,
 from .full_data import ROOT,REC,OUT,LOCAL,MANIFEST
 from poly02.data import read_mask,rows,save_rows
 from .maskcodec import score_mask as metrics
+from poly04.prepare import prepare_input, SUCCESS
 
 
 def ordered_allocations(banks,total):
@@ -52,13 +53,10 @@ def ordered_allocations(banks,total):
 
 def solve(raw,budget,policy,limit=64):
     t=time.perf_counter_ns()
-    ren=Renderer(raw.shape);dense,par=extract(raw)
-    source=ren.combined(dense)
-    if not np.array_equal(source,raw): return dict(status="unsupported_representation",reason="lossless failed"),None,[]
-    ref=digital(raw)
-    if budget<length(par,3*len(par)):return dict(status="below_proved_lower_bound",reason="lower_bound",encode_ms=(time.perf_counter_ns()-t)/1e6,checks=0),None,[]
-    total=min(sum(map(len,dense)),(budget-length(par,0))//4)
-    refs=[ren.ring(r) for r in dense]
+    prep=prepare_input(raw,budget)
+    if prep.status!=SUCCESS:
+        return dict(status=prep.status,reason=prep.reason,encode_ms=(time.perf_counter_ns()-t)/1e6,checks=0),None,[]
+    dense,par,ren,ref,refs,total=prep.dense,prep.parents,prep.render,prep.ref,prep.ref_masks,prep.target
     banks=curves(dense,refs,ren,total)
     seed=optimal(banks,total)
     log=[]; checked={};blocked=set()

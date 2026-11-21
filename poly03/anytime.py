@@ -8,11 +8,12 @@ import numpy as np
 import cv2
 from .allocation import curves,optimal,candidates,perimeter_counts
 from .atomic import replace_vertex
+from poly04.prepare import SUCCESS, NO_OUTPUT, allocation_seed, prepare_input
 from .exchange import proposals,optimize
 from .maskcodec import Renderer,extract,vector_ok,digital,correspondence,length,pack,decode
 from .full_data import ROOT,LOCAL,OUT,MANIFEST
 from poly02.data import rows,read_mask,save_rows
-from poly02.core import metrics
+from .maskcodec import score_mask as metrics
 
 cv2.setNumThreads(1)
 CFG=json.loads((ROOT/"configs/poly03/full.json").read_text())
@@ -21,21 +22,11 @@ METHODS=("global","global_cached","additive","within_additive")
 
 
 def init(raw,budget):
-    rings,par=extract(raw)
-    if budget<length(par,3*len(par)): return None,"below_proved_lower_bound"
-    render=Renderer(raw.shape)
-    if not np.array_equal(render.combined(rings),raw):return None,"unsupported_representation"
-    ref=digital(raw)
-    refs=[render.ring(p) for p in rings]
-    k=min(sum(map(len,rings)),(budget-length(par,0))//4)
-    bank=curves(rings,refs,render,k)
-    dp=optimal(bank,k)
-    per=perimeter_counts(rings,k)
-    for c in candidates(bank,dp,per,k,CFG):
-        seed=[b[v].points for b,v in zip(bank,c)]
-        if vector_ok(seed,par)=="ok" and correspondence(ref,digital(render.combined(seed)))=="ok":
-            return (rings,par,render,ref,refs,seed),"success"
-    return None,"search_no_valid_output"
+    prep=prepare_input(raw,budget)
+    if prep.status!=SUCCESS: return None,prep.status
+    seed,reason=allocation_seed(prep,CFG)
+    if seed is None: return None,NO_OUTPUT
+    return (prep.dense,prep.parents,prep.render,prep.ref,prep.ref_masks,seed),SUCCESS
 
 
 def lazy_step(raw,dense,par,render,ref,refs,state,within=False,audit=False):
@@ -109,7 +100,7 @@ def test_trace():
                 full_parity_accepted_steps=global_kept,full_parity_files_checked=len(records),wall_s=time.perf_counter()-t)
 
 
-def checkpoints(raw,b,method,max_ms=200,instrumented=False):
+def checkpoints(raw,b,method,max_ms=200,instrumented=False,on_checkpoint=None):
     t=time.perf_counter_ns()
     elapsed=lambda:(time.perf_counter_ns()-t)/1e6
     start,status=init(raw,b)
@@ -120,8 +111,11 @@ def checkpoints(raw,b,method,max_ms=200,instrumented=False):
         blob=pack(raw.shape,p,par)
         now=elapsed()
         # Store bytes now; compute evaluation after the timed search has finished.
-        values.append(dict(round=round_id,ready_ms=now,payload=blob,pair_evals=n,
-                           finalist_draws=validations,ring_draws=ren.isolated_calls,combined_draws=ren.combined_calls))
+        event=dict(round=round_id,ready_ms=now,serialized_ms=now,start_ns=t,payload=blob,pair_evals=n,
+                   finalist_draws=validations,ring_draws=ren.isolated_calls,combined_draws=ren.combined_calls)
+        event["delivered_ms"]=elapsed()
+        if on_checkpoint is not None: on_checkpoint(blob,event.copy())
+        values.append(event)
     snapshot(0)
     for round_id in range(1,9):
         if elapsed()>max_ms:break

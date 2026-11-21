@@ -1,0 +1,18 @@
+{
+  "region_fixture": {
+    "foreground_coverage": 0.2,
+    "hole_coverage": 0.25,
+    "perfect_regions": 3,
+    "swapped_rejected": true,
+    "empty_and_unsupported_handled": true
+  },
+  "aggregation_fixture": {
+    "raw_timing_rows": 96,
+    "r2_source_weighted_xor": 1.0,
+    "all_ring_common_runs": 13,
+    "paired_structure_conflict_verified": true,
+    "full_repeat_sensitivity": -2.0,
+    "late_observation_rejected": true,
+    "missing_repeat_rejected": true
+  }
+}

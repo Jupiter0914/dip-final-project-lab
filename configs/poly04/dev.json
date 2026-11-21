@@ -1,0 +1,40 @@
+{
+  "stage": "dev",
+  "manifest": "records/poly03/full-sources.csv",
+  "session_ids": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "rep_ids": [
+    1,
+    2
+  ],
+  "order_salt": "POLY04-dev-sequence-v1",
+  "warm_id": "havanese_26",
+  "max_rounds": 8,
+  "worker_policy": "One fresh Python process and one persistent original CGAL worker in each serial session. Warm first on one fixed known source. Every CGAL invocation recomputes all native curves; no cache across methods or trials.",
+  "conditions": [
+    {
+      "budget": 256,
+      "deadlines_ms": [
+        100,
+        200
+      ],
+      "methods": [
+        "seed",
+        "within_old",
+        "within_full_oldtri",
+        "within_full",
+        "cross_oldtri",
+        "cross_full_oldtri",
+        "cross",
+        "cgal",
+        "cgal_within",
+        "exact"
+      ]
+    }
+  ],
+  "bootstrap_seed": 40121,
+  "bootstrap_draws": 10000
+}

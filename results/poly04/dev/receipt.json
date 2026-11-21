@@ -1,0 +1,10 @@
+{
+  "stage": "dev",
+  "sources": 32,
+  "sessions": 3,
+  "trials": 1920,
+  "scored_source_outputs": 740,
+  "stored_blobs": 752,
+  "outputs_sha256": "c689e379fcd95347b29f340c9874d9e6b69b00923e9638751a49f3c54a8c75ec",
+  "journal_zip_sha256": "962675b0ec7fe8105071e322730d27ac57dca082c3e3d144020a0fa8fecb4511"
+}

@@ -21,6 +21,10 @@ class Unsupported(ValueError):
     pass
 
 
+class GeometryRejected(ValueError):
+    """A known simple-ring or laminar-tree predicate rejected the input."""
+
+
 def supported_shape(shape):
     return len(shape)==2 and all(0<d<=16382 for d in shape) and shape[0]*shape[1]<=4_000_000
 
@@ -37,9 +41,11 @@ def length(parent,vertices):
 
 
 def polygons(rings):
+    if any(len(p)<3 for p in rings):
+        raise GeometryRejected("nonsimple_or_flat_ring")
     shapes=[Polygon(p) for p in rings]
     if any(len(p)<3 or not q.is_valid or q.area<=0 for p,q in zip(rings,shapes)):
-        raise ValueError("nonsimple_or_flat_ring")
+        raise GeometryRejected("nonsimple_or_flat_ring")
     return shapes
 
 
@@ -49,20 +55,19 @@ def parents(shapes):
         containers=[]
         for j,q in enumerate(shapes):
             if j==i or p.disjoint(q): continue
-            if not p.boundary.disjoint(q.boundary): raise ValueError("ring_boundaries_meet")
+            if not p.boundary.disjoint(q.boundary): raise GeometryRejected("ring_boundaries_meet")
             if q.contains(p): containers.append(j)
-            elif not p.contains(q): raise ValueError("rings_cross")
+            elif not p.contains(q): raise GeometryRejected("rings_cross")
         if containers: result[i]=min(containers,key=lambda j:shapes[j].area)
     return result
 
 
 def vector_ok(rings,hierarchy):
     try: return ("ok" if parents(polygons(rings))==list(hierarchy) else "nesting_changed")
-    except ValueError as exc: return str(exc)
+    except GeometryRejected as exc: return str(exc)
 
 
 def extract(raw):
-    h,w=raw.shape
     if not supported_shape(raw.shape): raise Unsupported("outside_coordinate_or_implementation_canvas_limit")
     if np.any((raw!=0)&(raw!=1)): raise Unsupported("expected_binary_samples")
     curves=contourpy.contour_generator(z=np.pad(raw.astype(np.float64),1),name="serial",
@@ -82,7 +87,7 @@ def extract(raw):
     try:
         rings.sort(key=lambda p:(-Polygon(p).area,*Polygon(p).bounds))
         hierarchy=parents(polygons(rings))
-    except ValueError as exc: raise Unsupported(str(exc)) from exc
+    except GeometryRejected as exc: raise Unsupported(str(exc)) from exc
     return rings,hierarchy
 
 

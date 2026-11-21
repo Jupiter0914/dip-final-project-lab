@@ -1,0 +1,278 @@
+[
+  {
+    "pid": 24276,
+    "session": "S1",
+    "start_utc": "2026-11-21T04:15:25.562988+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "92034f8d6b183394a1a3bda6416b60f26f36f32868b8b5f592ac1a7605c9bc49",
+    "settings_sha": "7585f9d8b87c92082e0aa13a3ad2d4373916e7c55b054ed55fb6dda24b68a408",
+    "available_memory": 4038053888,
+    "start_load": 0.7,
+    "opencv_threads": 1,
+    "worker_policy": "One fresh Python process and one persistent original CGAL worker in each serial session. Warm first on one fixed known source. Every CGAL invocation recomputes all native curves; no cache across methods or trials.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 2739.6097,
+        "worker_cold_ms": 2720.6509,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 42.6294,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 75.3244,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_full_oldtri",
+        "ms": 65.923,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_oldtri",
+        "ms": 64.5711,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 75.6429,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 32.8089,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 59.2417,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full_oldtri",
+        "ms": 59.3048,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_old",
+        "ms": 57.6005,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "process_launch_to_initialized_ms": 469.2085,
+    "trials": 640,
+    "wall_s": 85.79584820009768,
+    "end_utc": "2026-11-21T04:16:54.858128+00:00",
+    "journal_sha256": "a92d4830c428abd1bd0e2f56b9b5f8d04763d3afbad6f069f364f38a8457b836",
+    "end_rss": 60829696
+  },
+  {
+    "pid": 11412,
+    "session": "S2",
+    "start_utc": "2026-11-21T04:16:55.193145+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "92034f8d6b183394a1a3bda6416b60f26f36f32868b8b5f592ac1a7605c9bc49",
+    "settings_sha": "7585f9d8b87c92082e0aa13a3ad2d4373916e7c55b054ed55fb6dda24b68a408",
+    "available_memory": 2154467328,
+    "start_load": 2.2,
+    "opencv_threads": 1,
+    "worker_policy": "One fresh Python process and one persistent original CGAL worker in each serial session. Warm first on one fixed known source. Every CGAL invocation recomputes all native curves; no cache across methods or trials.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 81.6323,
+        "worker_cold_ms": 63.4024,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 40.5167,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 54.3209,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_full_oldtri",
+        "ms": 55.1431,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_oldtri",
+        "ms": 54.4853,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 55.7443,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 27.0378,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 53.3639,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full_oldtri",
+        "ms": 51.6831,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_old",
+        "ms": 53.8148,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "process_launch_to_initialized_ms": 448.1357,
+    "trials": 640,
+    "wall_s": 84.1181654999964,
+    "end_utc": "2026-11-21T04:18:20.028631+00:00",
+    "journal_sha256": "47ab63986cf7618b060417efec89cedc102b73d0c6ea74c0b9ca09495d540635",
+    "end_rss": 58793984
+  },
+  {
+    "pid": 42632,
+    "session": "S3",
+    "start_utc": "2026-11-21T04:18:20.367824+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "92034f8d6b183394a1a3bda6416b60f26f36f32868b8b5f592ac1a7605c9bc49",
+    "settings_sha": "7585f9d8b87c92082e0aa13a3ad2d4373916e7c55b054ed55fb6dda24b68a408",
+    "available_memory": 2956562432,
+    "start_load": 13.4,
+    "opencv_threads": 1,
+    "worker_policy": "One fresh Python process and one persistent original CGAL worker in each serial session. Warm first on one fixed known source. Every CGAL invocation recomputes all native curves; no cache across methods or trials.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 73.9424,
+        "worker_cold_ms": 54.1134,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 41.1295,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 54.3938,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_full_oldtri",
+        "ms": 56.5698,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross_oldtri",
+        "ms": 55.2038,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 57.09,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 25.5307,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 51.4228,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full_oldtri",
+        "ms": 50.4072,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_old",
+        "ms": 53.3817,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "process_launch_to_initialized_ms": 447.0818,
+    "trials": 640,
+    "wall_s": 83.77759370021522,
+    "end_utc": "2026-11-21T04:19:44.851932+00:00",
+    "journal_sha256": "023bc8cfac3b39a91f951a9f1ad2b10aa0c0a17372e43f79c3af5510e63c874f",
+    "end_rss": 59138048
+  }
+]

@@ -11,6 +11,7 @@ from .allocation import hierarchy,perimeter_counts,curves,optimal,candidates
 from .exchange import optimize
 from .anytime import lazy_step
 from .matched import full_step
+from poly04.prepare import prepare_input, validate_rings, SUCCESS
 from .cgal_bridge import simplify
 from .full_data import ROOT,MANIFEST
 from poly02.data import rows,read_mask
@@ -22,19 +23,12 @@ def encode_one(raw,budget,method="additive",rounds=2):
     start=time.perf_counter_ns()
     if method not in OPTIONS or budget<0 or rounds<0: raise ValueError("unknown method or invalid budget")
     cfg=json.loads((ROOT/"configs/poly03/full.json").read_text())
-    try:
-        dense,par=extract(raw)
-    except Unsupported as exc: return None,dict(status="unsupported_representation",reason=str(exc))
-    ren=Renderer(raw.shape);ref=digital(raw)
-    if not np.array_equal(raw,ren.combined(dense)):
-        return None,dict(status="unsupported_representation",reason="lossless_reference_mismatch")
-    lb=length(par,len(par)*3)
-    if budget<lb:return None,dict(status="below_proved_lower_bound",lower_bound=lb)
-    target=min(sum(map(len,dense)),(budget-length(par,0))//4)
+    prep=prepare_input(raw,budget)
+    if prep.status!=SUCCESS:
+        return None,dict(status=prep.status,reason=prep.reason,lower_bound=prep.lower_bound)
+    dense,par,ren,ref,lb,target=prep.dense,prep.parents,prep.render,prep.ref,prep.lower_bound,prep.target
     def validate(ps):
-        if sum(map(len,ps))!=target:return "wrong_vertex_count"
-        why=vector_ok(ps,par)
-        return why if why!="ok" else correspondence(ref,digital(ren.combined(ps)))
+        return validate_rings(prep,ps)
     trace=[]
     if not dense:p=[]
     elif method.startswith("cgal_"):
@@ -45,7 +39,7 @@ def encode_one(raw,budget,method="additive",rounds=2):
         counts=perimeter_counts(dense,target)
         p=[next(v for k,v in hierarchy(r,lim) if k==lim) for r,lim in zip(dense,counts)]
     else:
-        refs=[ren.ring(p) for p in dense]
+        refs=prep.ref_masks
         banks=curves(dense,refs,ren,target)
         dp=optimal(banks,target)
         if dp is None:return None,dict(status="search_no_valid_output",reason="empty_exact_allocation",lower_bound=lb)

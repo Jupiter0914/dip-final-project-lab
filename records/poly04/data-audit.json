@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "materialized_native_inputs": 300,
+  "old_raw_exclusions": 442,
+  "known_source_views": 443,
+  "graph_components_rebuilt": 4944,
+  "matching_links": 2057,
+  "fully_reselected_from_family_graph": true,
+  "known_intersections": 0,
+  "selected_duplicate_families": 0,
+  "oxford": 200,
+  "lems": 100,
+  "selected_strata": {
+    "Oxford": {
+      "simple": 50,
+      "holes": 50,
+      "components": 50,
+      "near": 50
+    },
+    "LEMS": {
+      "simple": 90,
+      "near": 10
+    }
+  },
+  "r_multiple": {
+    "Oxford": 150,
+    "LEMS": 10
+  },
+  "manifest_sha256": "775eb508815110ad4fb648c00688aed3b646ee47cd9b14a4fabd90d982600549",
+  "selection_commit": "956cc05e6e249b9a276f5b75c899a8cd6837290d"
+}

@@ -1,0 +1,6 @@
+reason,dataset,kind,id,reference_id,reference_area,method,method_area_ratio,budget,deadline_ms,session,rep,area_band,baseline,global_xor_gain,method_xor,baseline_xor,method_sha256,baseline_sha256,method_area,baseline_area,method_hit,baseline_hit,method_recall,baseline_recall,recall_gain_pp,precision_gain_pp,baseline_area_ratio,area_ratio_change,severe_abs,new_severe,half_baseline
+worst_observed_reference_area_ratio,MPEG7,foreground,children-15,1,400,cross,1.0,,,,,,,,,,,,,,,,,,,,,,,,
+worst_observed_reference_area_ratio,MPEG7,hole,jar-13,2,214,cross,0.9906542056074766,,,,,,,,,,,,,,,,,,,,,,,,
+lower_region_coverage,Oxford,foreground,basset_hound_75,1,414,cross,0.8405797101449275,256,100,S2,1,257+,within_full,54,1005,1059,3cc10d44d7989681977e49fc757d1200f5e03a1388f108d6fc37b5da65779d38,1e2a92993cd2ead4ab15155c096033c47eeb0045580d662f21231b056fa1a834,348,539,306,378,0.7391304347826086,0.9130434782608695,-17.391304347826086,17.801164352888488,1.3019323671497585,-0.46135265700483097,0,0,0
+worst_observed_reference_area_ratio,Oxford,foreground,miniature_pinscher_46,2,3,cross,0.6666666666666666,,,,,,,,,,,,,,,,,,,,,,,,
+worst_observed_reference_area_ratio,Oxford,hole,american_pit_bull_terrier_148,2,144,cross,0.8194444444444444,,,,,,,,,,,,,,,,,,,,,,,,

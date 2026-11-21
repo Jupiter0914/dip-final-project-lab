@@ -1,0 +1,17 @@
+dataset,budget,deadline_ms,method,baseline,category,category_sources,category_mean,n_without,mean_without_category
+MPEG7,256,100,cross,within_full,jar,1,0.0,0,
+Oxford,256,100,cross,within_full,Egyptian_Mau,1,-0.6666666666666666,20,8.091666666666665
+Oxford,256,100,cross,within_full,Russian_Blue,1,5.0,20,7.808333333333333
+Oxford,256,100,cross,within_full,american_pit_bull_terrier,1,0.0,20,8.058333333333334
+Oxford,256,100,cross,within_full,basset_hound,1,18.0,20,7.158333333333334
+Oxford,256,100,cross,within_full,beagle,2,22.916666666666668,19,6.0701754385964914
+Oxford,256,100,cross,within_full,boxer,2,-4.666666666666667,19,8.973684210526315
+Oxford,256,100,cross,within_full,german_shorthaired,2,7.833333333333333,19,7.657894736842105
+Oxford,256,100,cross,within_full,great_pyrenees,1,0.0,20,8.058333333333334
+Oxford,256,100,cross,within_full,havanese,3,5.888888888888889,18,7.972222222222222
+Oxford,256,100,cross,within_full,leonberger,1,0.0,20,8.058333333333334
+Oxford,256,100,cross,within_full,miniature_pinscher,1,0.0,20,8.058333333333334
+Oxford,256,100,cross,within_full,saint_bernard,2,11.0,19,7.324561403508771
+Oxford,256,100,cross,within_full,scottish_terrier,1,3.5,20,7.883333333333333
+Oxford,256,100,cross,within_full,shiba_inu,1,43.5,20,5.883333333333333
+Oxford,256,100,cross,within_full,yorkshire_terrier,1,0.0,20,8.058333333333334

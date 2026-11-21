@@ -1,0 +1,2 @@
+dataset,budget,deadline_ms,method,baseline,categories,sources,mean,lo,hi
+Oxford,256,100,cross,within_full,15,21,7.674603174603174,2.6248511904761904,13.77277183600713

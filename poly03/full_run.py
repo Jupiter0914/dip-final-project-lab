@@ -13,6 +13,7 @@ from poly02.data import rows,read_mask,save_rows
 from .allocation import hierarchy,perimeter_counts,curves,optimal,candidates
 from .cgal_bridge import simplify
 from .exchange import optimize
+from poly04.prepare import prepare_input, SUCCESS
 from .full_data import ROOT,REC,OUT,LOCAL,MANIFEST
 from .maskcodec import digital,correspondence,Renderer,extract,vector_ok,pack,decode,length,Unsupported
 
@@ -41,31 +42,21 @@ def elapsed(start,render):
 def run_one(row,budget,folder,blobdir,cfg):
     raw=read_mask(row)
     started=time.perf_counter_ns()
-    render=Renderer(raw.shape)
+    prep=prepare_input(raw,budget)
+    render=prep.render
     start=(started,0,0)
     context=dict(id=row["id"],dataset=row["dataset"],stratum=row["stratum"],budget=budget,
-                 reference_fg=int(row["components"]),reference_holes=int(row["holes"]))
+                 reference_fg=row.get("components",""),reference_holes=row.get("holes",""))
     records=[]; combos=[]; traces=[]
-    def fail_all(status,reason):
-        work=elapsed(start,render)
+    dense,par,ref,masks,target=prep.dense,prep.parents,prep.ref,prep.ref_masks,prep.target
+    if prep.dense is not None:
+        context.update(rings=prep.rings,high_vertices=prep.high_vertices,lower_bound=prep.lower_bound,
+                       target_vertices=target,ref_area=int(raw.sum()),expected_bytes=length(par,target) if target is not None else "")
+    if prep.status!=SUCCESS:
+        elapsed_ms=(time.perf_counter_ns()-started)/1e6
         for m in METHODS:
-            records.append(dict(**context,method=m,status=status,reason=reason,encode_ms=work.ms,structure_pass=0))
+            records.append(dict(**context,method=m,status=prep.status,reason=prep.reason,encode_ms=elapsed_ms,structure_pass=0))
         return records,combos,traces
-
-    try:
-        dense,par=extract(raw)
-        ref=digital(raw)
-        masks=[render.ring(p) for p in dense]
-        high=render.combined(dense)
-        if not np.array_equal(high,raw): raise Unsupported("full_precision_pixel_mismatch")
-        n=sum(map(len,dense))
-        bound=length(par,3*len(par))
-        target=min(n,(budget-length(par,0))//4)
-        context.update(rings=len(par),high_vertices=n,lower_bound=bound,target_vertices=target,
-                       ref_area=int(raw.sum()),expected_bytes=length(par,target) if target>=0 else "")
-    except Unsupported as exc:
-        return fail_all("unsupported_representation",str(exc))
-    if budget<bound: return fail_all("below_proved_lower_bound","header+ring_metadata+three_vertices_per_ring")
     common=elapsed(start,render)
 
     def assess(rings):

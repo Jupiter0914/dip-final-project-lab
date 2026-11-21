@@ -1,0 +1,30 @@
+{
+  "status_fixtures": [
+    "empty",
+    "pixel",
+    "diagonal",
+    "single_hole",
+    "below",
+    "wide",
+    "wrong_dimension",
+    "nonbinary"
+  ],
+  "offline_four_status_fixture": true,
+  "offline_empty_files_checked": 1,
+  "arbitrary_errors_propagate": true,
+  "matched_exhaustive_top24": true,
+  "triangle_has_final_same_ring_moves": true,
+  "triangle_never_cross_donor": true,
+  "actual_tri_replacement": {
+    "before": 126,
+    "after": 56,
+    "bytes": 26
+  },
+  "dev_sources_checked": 32,
+  "DP_initial_blobs_identical": 30,
+  "remaining_original_statuses_unchanged": 2,
+  "ordinary_old_within_two_rounds_byte_match": true,
+  "synchronous_delivery_events": 3,
+  "exact_supplement_candidates": 24,
+  "backwards_mapping_pixel_equal": true
+}

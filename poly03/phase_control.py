@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 from .allocation import curves
 from .repair import ordered_allocations
+from poly04.prepare import prepare_input, SUCCESS
 from .maskcodec import Renderer,extract,length,vector_ok,digital,correspondence,pack,decode,score_mask
 from .full_data import ROOT,REC,LOCAL,OUT,MANIFEST
 from poly02.data import rows,save_rows,read_mask
@@ -20,11 +21,10 @@ def phase_ring(p,frac):
 
 def solve(raw,B):
     t=time.perf_counter_ns()
-    orig,par=extract(raw)
-    ren=Renderer(raw.shape);rf=digital(raw)
-    assert np.array_equal(ren.combined(orig),raw)
-    ref=[ren.ring(p) for p in orig]
-    target=min(sum(map(len,orig)),(B-length(par,0))//4)
+    prep=prepare_input(raw,B)
+    if prep.status!=SUCCESS:
+        return dict(status=prep.status,reason=prep.reason,encode_ms=(time.perf_counter_ns()-t)/1e6,checks=0),None,[]
+    orig,par,ren,rf,ref,target=prep.dense,prep.parents,prep.render,prep.ref,prep.ref_masks,prep.target
     tests=[]
     banks={}; streams={}; exhausted=set();winner=None
     for turn in range(64*4):
