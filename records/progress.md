@@ -21,3 +21,7 @@ A《固定顶点预算下基于回填误差的二值外轮廓多边形编码》�
 ## POLY03-EXPLORE
 
 独立探索分支已完成完整蒙版、原子删插与细部诊断的开发试验，未运行新的确认集。[四项结论与去留](../report/poly03/review.md) · [工作记录](poly03/progress.md) · [可运行及复算入口](../report/poly03/README.md)。
+
+## POLY04-CONFIRM
+
+32 张已知图的加强基线补查及 300 个新输入的三个独立计时会话已完成。[结论和限制](../report/poly04/review.md) · [逐源分析](../results/poly04/confirm/analysis/source_pairs.csv) · [运行与离线复算](../report/poly04/README.md)。

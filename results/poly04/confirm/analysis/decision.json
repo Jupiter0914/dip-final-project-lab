@@ -1,0 +1,64 @@
+{
+  "stage": "confirm",
+  "evidence": "independent_confirmation",
+  "roster_sources": 300,
+  "validated_rows": 24336,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 40121,
+  "primary_budget": 256,
+  "primary_deadline_ms": 100,
+  "primary_domain": "Oxford",
+  "primary_scope": "R2+",
+  "decision": [
+    {
+      "dataset": "LEMS",
+      "decision": "increment_not_established",
+      "checks": {
+        "positive_xor_lower": false,
+        "all_sessions_positive": true,
+        "all_leave_one_source_positive": false,
+        "overall_coverage_lower": true
+      },
+      "external_replication": "unresolved_or_opposite",
+      "n_primary": 7,
+      "primary_mean_xor": 0.42857142857142855,
+      "primary_ci95": [
+        0.0,
+        1.2857142857142858
+      ],
+      "n_all_sources": 100,
+      "overall_coverage_gain_pp": 0.0,
+      "coverage_gain_ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "minimum_leave_one_xor": 0.0,
+      "maximum_leave_one_xor": 0.5
+    },
+    {
+      "dataset": "Oxford",
+      "decision": "stable_positive_increment",
+      "checks": {
+        "positive_xor_lower": true,
+        "all_sessions_positive": true,
+        "all_leave_one_source_positive": true,
+        "overall_coverage_lower": true
+      },
+      "external_replication": "primary_domain",
+      "n_primary": 146,
+      "primary_mean_xor": 2.26027397260274,
+      "primary_ci95": [
+        0.6358162100456622,
+        4.013727168949772
+      ],
+      "n_all_sources": 200,
+      "overall_coverage_gain_pp": -0.08333333333333331,
+      "coverage_gain_ci95_pp": [
+        -0.24999999999999997,
+        0.0
+      ],
+      "minimum_leave_one_xor": 1.903448275862069,
+      "maximum_leave_one_xor": 2.4655172413793105
+    }
+  ]
+}

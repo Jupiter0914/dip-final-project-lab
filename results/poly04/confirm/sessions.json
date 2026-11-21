@@ -1,0 +1,212 @@
+[
+  {
+    "pid": 53104,
+    "session": "S1",
+    "start_utc": "2026-11-21T04:31:15.236284+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "775eb508815110ad4fb648c00688aed3b646ee47cd9b14a4fabd90d982600549",
+    "settings_sha": "6f890848ee065ba907e70c6c8e6be49c5dd6eab3f3cbdda18d866b0a2fb2d7f3",
+    "available_memory": 3797446656,
+    "start_load": 7.0,
+    "opencv_threads": 1,
+    "worker_policy": "3 fresh serial processes; one persistent original CGAL squared worker per session. Warm up on havanese_26. Each method independently constructs its own start.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 3288.4108,
+        "worker_cold_ms": 3267.7817,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 50.1664,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 63.2469,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 66.1504,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 34.1653,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 61.2025,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "cgal_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+    "numpy": "2.4.4",
+    "opencv": "5.0.0",
+    "geos": "3.13.1",
+    "shapely": "2.1.2",
+    "machine_cpu_threads": 24,
+    "process_launch_to_initialized_ms": 464.9312,
+    "trials": 4056,
+    "wall_s": 363.6870458996855,
+    "end_utc": "2026-11-21T04:37:22.673749+00:00",
+    "journal_sha256": "7bfbf9b181268a392f90cc0d47d8a99908509789f00229c72fe53e7cd3c6bc99",
+    "end_rss": 63311872
+  },
+  {
+    "pid": 56528,
+    "session": "S2",
+    "start_utc": "2026-11-21T04:37:23.110768+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "775eb508815110ad4fb648c00688aed3b646ee47cd9b14a4fabd90d982600549",
+    "settings_sha": "6f890848ee065ba907e70c6c8e6be49c5dd6eab3f3cbdda18d866b0a2fb2d7f3",
+    "available_memory": 3050610688,
+    "start_load": 7.9,
+    "opencv_threads": 1,
+    "worker_policy": "3 fresh serial processes; one persistent original CGAL squared worker per session. Warm up on havanese_26. Each method independently constructs its own start.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 85.2968,
+        "worker_cold_ms": 66.6478,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 41.9352,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 55.0291,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 57.3675,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 26.011,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 54.1637,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "cgal_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+    "numpy": "2.4.4",
+    "opencv": "5.0.0",
+    "geos": "3.13.1",
+    "shapely": "2.1.2",
+    "machine_cpu_threads": 24,
+    "process_launch_to_initialized_ms": 538.7278,
+    "trials": 4056,
+    "wall_s": 354.936662199907,
+    "end_utc": "2026-11-21T04:43:18.550295+00:00",
+    "journal_sha256": "f25417b99f7ccaf4d0b207147bb8a1dc9bd6ea7ce685f81d366f6ce26dc08ba3",
+    "end_rss": 64929792
+  },
+  {
+    "pid": 16536,
+    "session": "S3",
+    "start_utc": "2026-11-21T04:43:19.004272+00:00",
+    "monotonic": "QueryPerformanceCounter()",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+    "raw_manifest_sha": "775eb508815110ad4fb648c00688aed3b646ee47cd9b14a4fabd90d982600549",
+    "settings_sha": "6f890848ee065ba907e70c6c8e6be49c5dd6eab3f3cbdda18d866b0a2fb2d7f3",
+    "available_memory": 3505573888,
+    "start_load": 10.1,
+    "opencv_threads": 1,
+    "worker_policy": "3 fresh serial processes; one persistent original CGAL squared worker per session. Warm up on havanese_26. Each method independently constructs its own start.",
+    "warmup": [
+      {
+        "id": "havanese_26",
+        "method": "cgal",
+        "ms": 89.4196,
+        "worker_cold_ms": 70.5702,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cgal_within",
+        "ms": 41.8593,
+        "worker_cold_ms": 0.0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "cross",
+        "ms": 55.7925,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "exact",
+        "ms": 56.8969,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "seed",
+        "ms": 25.7871,
+        "worker_cold_ms": 0,
+        "status": "success"
+      },
+      {
+        "id": "havanese_26",
+        "method": "within_full",
+        "ms": 53.2461,
+        "worker_cold_ms": 0,
+        "status": "success"
+      }
+    ],
+    "cgal_worker_sha256": "82c46774b8788c8059af19433423b12e89f4bbc14ccf3f55c7f79f01bd8cc3f7",
+    "numpy": "2.4.4",
+    "opencv": "5.0.0",
+    "geos": "3.13.1",
+    "shapely": "2.1.2",
+    "machine_cpu_threads": 24,
+    "process_launch_to_initialized_ms": 561.5168,
+    "trials": 4056,
+    "wall_s": 354.97767500020564,
+    "end_utc": "2026-11-21T04:49:14.496809+00:00",
+    "journal_sha256": "1fe4bc2f70777898a01e272c7cdb8522ea41d33c2923e4764d8ed701cbff8f99",
+    "end_rss": 62435328
+  }
+]

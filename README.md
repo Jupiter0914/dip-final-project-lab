@@ -1,5 +1,7 @@
 # 固定顶点预算下基于回填误差的二值外轮廓多边形编码
 
+> **当前分支 POLY04-CONFIRM**　[独立确认结论](report/poly04/review.md) · [主次条件全表](report/poly04/tables.md) · [一次编码、离线审核与运行入口](report/poly04/README.md)。以下为旧阶段交接。
+
 > **当前分支 POLY03-EXPLORE**　[开发结论与淘汰决定](report/poly03/review.md) · [真实实例与运行入口](report/poly03/README.md) · [新确认计划](records/poly03/next-confirmation.md)。以下正文保留此前 POLY02 与 v1 的交接。
 
 > **本轮主控审核 POLY02**　[结论与反例](report/poly02/review.md) · [代码、演示和复算入口](report/poly02/README.md) · [冻结协议](records/poly02/freeze.md)。以下正文保留 v1 的实验与交付记录。

@@ -1,0 +1,77 @@
+{
+  "dev": {
+    "stage": "dev",
+    "planned_and_observed_trials": 1920,
+    "receiver_events": 9881,
+    "search_rounds": 8608,
+    "endpoint_rows": 3840,
+    "sessions": 3,
+    "worker_digest_recorded_sessions": 0,
+    "fresh_pids": [
+      24276,
+      11412,
+      42632
+    ],
+    "source_count": 32,
+    "unique_pm31": 752,
+    "scored_source_outputs": 740,
+    "terminal_counts": {
+      "success": 1800,
+      "search_no_valid_output": 60,
+      "below_proved_lower_bound": 60
+    },
+    "endpoint_counts": {
+      "success": 3600,
+      "search_no_valid_output": 120,
+      "below_proved_lower_bound": 120
+    },
+    "deadlines_with_later_deliveries": 1781,
+    "serialized_before_but_received_after": 0,
+    "cgal_native_calls": 372,
+    "cgal_rejected_without_fallback": 12,
+    "cgal_forward_normalized": 180,
+    "reversed_mapping_rings": 0,
+    "pixel_checked_nonidentical_cgal_mappings": 0,
+    "journal_source": "ZIP",
+    "payload_source": "ZIP",
+    "wall_s": 0.6620004000142217
+  },
+  "confirm": {
+    "stage": "confirm",
+    "planned_and_observed_trials": 12168,
+    "receiver_events": 50191,
+    "search_rounds": 41383,
+    "endpoint_rows": 24336,
+    "sessions": 3,
+    "worker_digest_recorded_sessions": 3,
+    "fresh_pids": [
+      53104,
+      56528,
+      16536
+    ],
+    "source_count": 300,
+    "unique_pm31": 7570,
+    "scored_source_outputs": 7443,
+    "terminal_counts": {
+      "success": 11024,
+      "search_no_valid_output": 1114,
+      "below_proved_lower_bound": 30
+    },
+    "endpoint_counts": {
+      "success": 21990,
+      "search_no_valid_output": 2192,
+      "not_ready": 94,
+      "below_proved_lower_bound": 60
+    },
+    "deadlines_with_later_deliveries": 6748,
+    "serialized_before_but_received_after": 1,
+    "cgal_native_calls": 4740,
+    "cgal_rejected_without_fallback": 490,
+    "cgal_forward_normalized": 2128,
+    "reversed_mapping_rings": 0,
+    "pixel_checked_nonidentical_cgal_mappings": 0,
+    "journal_source": "ZIP",
+    "payload_source": "ZIP",
+    "wall_s": 4.724049599841237
+  }
+}

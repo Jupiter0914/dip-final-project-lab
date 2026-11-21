@@ -1,0 +1,5 @@
+dataset,budget,deadline_ms,sources,own_start_xor_saved_mean,source_wins,source_ties,source_losses,independent_raw_pairs,different_native_blobs
+LEMS,256,100,86,55.68217054263565,86,0,0,600,27
+LEMS,256,200,86,55.68217054263565,86,0,0,600,27
+Oxford,256,100,194,94.56701030927834,191,3,0,1200,523
+Oxford,256,200,194,139.54810996563575,193,1,0,1200,523

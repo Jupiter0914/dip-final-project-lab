@@ -1,0 +1,10 @@
+{
+  "stage": "confirm",
+  "sources": 300,
+  "sessions": 3,
+  "trials": 12168,
+  "scored_source_outputs": 7443,
+  "stored_blobs": 7570,
+  "outputs_sha256": "f2ca25a4b36290f263e68083a0dec89dd8229e3141ee470d8ee6b654606ef5c1",
+  "journal_zip_sha256": "df2fa728c2979086d34850262ec7da9020673c79336873cefa3eb05b8536abbc"
+}

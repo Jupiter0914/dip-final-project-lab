@@ -1,0 +1,125 @@
+{
+  "inputs": 300,
+  "known_source_intersections": 0,
+  "known_two_rounds": {
+    "calls": 320,
+    "valid": 300
+  },
+  "dev": {
+    "journals": {
+      "stage": "dev",
+      "planned_and_observed_trials": 1920,
+      "receiver_events": 9881,
+      "search_rounds": 8608,
+      "endpoint_rows": 3840,
+      "sessions": 3,
+      "worker_digest_recorded_sessions": 0,
+      "fresh_pids": [
+        24276,
+        11412,
+        42632
+      ],
+      "source_count": 32,
+      "unique_pm31": 752,
+      "scored_source_outputs": 740,
+      "terminal_counts": {
+        "success": 1800,
+        "search_no_valid_output": 60,
+        "below_proved_lower_bound": 60
+      },
+      "endpoint_counts": {
+        "success": 3600,
+        "search_no_valid_output": 120,
+        "below_proved_lower_bound": 120
+      },
+      "deadlines_with_later_deliveries": 1781,
+      "serialized_before_but_received_after": 0,
+      "cgal_native_calls": 372,
+      "cgal_rejected_without_fallback": 12,
+      "cgal_forward_normalized": 180,
+      "reversed_mapping_rings": 0,
+      "pixel_checked_nonidentical_cgal_mappings": 0,
+      "journal_source": "ZIP",
+      "payload_source": "ZIP"
+    },
+    "pixels": {
+      "stage": "dev",
+      "source_outputs": 740,
+      "matched_foreground_and_holes": 1741,
+      "verified_success_observations": 3600,
+      "input_sources": 32,
+      "independent_boundary": "Euclidean distance transform at 1/2/3 pixels",
+      "independent_regions": "SAUF label contingency table and edge adjacency"
+    },
+    "supplement": {
+      "seed_attempts_scored": 61,
+      "diagnostic_checkpoint_states": 198,
+      "valid_additive_filter_misses": 0
+    },
+    "statistics": {
+      "verified_tables": 16,
+      "validated_observations": 3840,
+      "stage": "dev"
+    },
+    "source_reencodings": 8
+  },
+  "confirm": {
+    "journals": {
+      "stage": "confirm",
+      "planned_and_observed_trials": 12168,
+      "receiver_events": 50191,
+      "search_rounds": 41383,
+      "endpoint_rows": 24336,
+      "sessions": 3,
+      "worker_digest_recorded_sessions": 3,
+      "fresh_pids": [
+        53104,
+        56528,
+        16536
+      ],
+      "source_count": 300,
+      "unique_pm31": 7570,
+      "scored_source_outputs": 7443,
+      "terminal_counts": {
+        "success": 11024,
+        "search_no_valid_output": 1114,
+        "below_proved_lower_bound": 30
+      },
+      "endpoint_counts": {
+        "success": 21990,
+        "search_no_valid_output": 2192,
+        "not_ready": 94,
+        "below_proved_lower_bound": 60
+      },
+      "deadlines_with_later_deliveries": 6748,
+      "serialized_before_but_received_after": 1,
+      "cgal_native_calls": 4740,
+      "cgal_rejected_without_fallback": 490,
+      "cgal_forward_normalized": 2128,
+      "reversed_mapping_rings": 0,
+      "pixel_checked_nonidentical_cgal_mappings": 0,
+      "journal_source": "ZIP",
+      "payload_source": "ZIP"
+    },
+    "pixels": {
+      "stage": "confirm",
+      "source_outputs": 7443,
+      "matched_foreground_and_holes": 17062,
+      "verified_success_observations": 21990,
+      "input_sources": 300,
+      "independent_boundary": "Euclidean distance transform at 1/2/3 pixels",
+      "independent_regions": "SAUF label contingency table and edge adjacency"
+    },
+    "supplement": {
+      "seed_attempts_scored": 754,
+      "diagnostic_checkpoint_states": 298,
+      "valid_additive_filter_misses": 0
+    },
+    "statistics": {
+      "verified_tables": 16,
+      "validated_observations": 24336,
+      "stage": "confirm"
+    },
+    "source_reencodings": 10
+  }
+}
