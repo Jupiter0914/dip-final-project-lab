@@ -1,0 +1,57 @@
+{
+  "version": "POLY04-input-v1",
+  "basis": "8e05ef79dc8f4e15e54fdb57ad576a0dd86ed88f",
+  "salt": "poly04-independent-source-v1",
+  "oxford": {
+    "n": 200,
+    "source": "Oxford-IIIT Pet official test only",
+    "strata": [
+      "simple",
+      "holes",
+      "components",
+      "near"
+    ],
+    "quota": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "order": "Within stratum use SHA256(salt|Oxford|id), a single common cluster has one representative. Take up to 50 per stratum; remaining slots cycle near,holes,components,simple until 200; save screened candidates and counts.",
+    "if_insufficient": "Lock all surviving families without replacement, explicitly disclose numerical shortfall. No more data after scoring."
+  },
+  "external": {
+    "name": "LEMS",
+    "n": 100,
+    "excluded_prefixes": [
+      "Building",
+      "Fish-a"
+    ],
+    "eligible_prefixes": [
+      "Container",
+      "FruitorVegetable",
+      "MiscAnml",
+      "Person",
+      "Robot",
+      "Toddler",
+      "Turtle"
+    ],
+    "order": "Within each prefix SHA256(salt|LEMS|id). Cycle the 7 prefixes in listed order, skipping exhausted groups. At most 1 source per union-find component. Require at least 3 between serial numbers of a pick and each same-category known-linked/previously picked LEMS member. Aim for 100 distinct proxy families and stop if exhausted; no post-score replacement.",
+    "family_metadata": "Numbered IDs lack upstream acquisition/subject keys. Entire known Fish-a and Building categories excluded. Original near-adjacent series linked if co-category native numbers consecutive and 64px aligned silhouette IoU >=0.80 with aspect within factor 1.25. Also group all strict normalization/near-duplicate links across every category and dataset. Report source family proxy separately from category and use leave-one-category-out sensitivity.",
+    "if_insufficient": "Fix the available family count and freeze before evaluation. No multiple members per cluster."
+  },
+  "signature": {
+    "normalization": "Original binary = Oxford trimap == 1; LEMS/MPEG raw indexed pixel != median of top/left/right border medians. Native signature = SHA256(little-endian uint32 H,W || NumPy packbits C-order, big bit order). Crop translations before normalized 64x64 occupancy; compare eight axis permutations/flips, a tight-bbox 64x64 INTER_AREA occupancy >=0.5.",
+    "shape_link": "Raw SHA, native pixel SHA or D4 tight-native crop exact link. Otherwise transformed tight-bbox 64px binary IoU >= 0.92, native aspect ratio within multiplicative factor 1.18 (rotations accounted). D4 includes horizontal/vertical mirroring and 90-degree rotations. Union transitively, compare candidates also to every known binary source/probe.",
+    "paper_probe": "24 silhouettes from Fig.2 and five representative objects from Figs.1,6,7,8 of previously consulted UPF paper are separately marked approximate references. For these probes normalized shape IoU >=0.85 and aspect factor 1.40 links. Unknown-source publication silhouettes are excluded by matching rather than retrospectively assigning invented IDs.",
+    "oxford_rgb": "Original JPG archive required for confirmation sampling. Read raw JPG, EXIF orientation, image SHA, normalized 32x32 gray/RGB full view. Raw JPG SHA and nontrivial shared EXIF ImageUniqueID link. Also link if any D4 isometry has 63-bit DCT pHash Hamming <=10, full normalized grayscale correlation >=0.94 and mean-centered 8bit RGB RMSE <=22. Links transitive; visually similar pets in unrelated photos can conservatively be grouped.",
+    "retention": "For each cluster, if any known source/probe or excluded LEMS family is present, discard the complete cluster. Otherwise choose first hash-ranked candidate as the sole representative. Empty binary foreground signatures group together. Input support, feasibility or encoder results must never enter selection. Structural classes are assigned by POLY03 descriptor, independently of scores."
+  },
+  "supplements": {
+    "small_budget_sources_per_dataset": 24,
+    "rule": "Take round-robin hash-ranked selected sources per input structure stratum for 128/512 and exact-reference supplements as specified by scientific freeze. Selection fixed before any result.",
+    "rank_seed": "POLY04-secondary|dataset|id"
+  },
+  "known_counts_oxford": 336,
+  "metadata_note": "Publisher reports filtering repeat photos of the same pet during collection. Distributed split files/XML contain image/breed and some source/bounding-box fields, no comprehensive owner, session or individual identity. Family remains an operational proxy."
+}

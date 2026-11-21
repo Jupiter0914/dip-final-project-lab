@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "LEMS": 2,
+    "MPEG7": 73,
+    "Oxford": 336,
+    "PaperProbe": 29,
+    "UPF": 2
+  },
+  "unique_dataset_and_id": 442,
+  "scored_known_oxford": 336,
+  "scored_mpeg": 70,
+  "physical_source_warning": "UPF/LEMS same-name pairs and paper figures are not additional independent sources",
+  "archives": {
+    "Oxford annotations": {
+      "sha256": "52425fb6de5c424942b7626b428656fcbd798db970a937df61750c0f1d358e91",
+      "bytes": 19173078,
+      "xml_files": 3686,
+      "scope": "archive downloaded; only 336 native masks scored prior to POLY04"
+    },
+    "Author shape RAR": {
+      "sha256": "f6a132c16ca4800fc9cfbe3d469a086599aba67783448362c0bc2275bf7e6d1c",
+      "bytes": 1410456,
+      "scope": "LEMS 1462 and MPEG 1400 numbered images plus two index graphics; wholesale download and name checks do not count as per-file evaluation"
+    },
+    "Author ZIP": {
+      "bytes": 70808,
+      "scope": "includes two visually available example GIFs; Fish actually ran"
+    }
+  },
+  "original_split_note": "No comprehensive individual/session ID in Oxford masks, official lists or XML; original paper reports same-animal manual screening."
+}
