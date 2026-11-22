@@ -1,5 +1,5 @@
 
-"""Build a private materials ZIP from the named Git commit, retaining byte-identical source tables."""
+"""Build a public offline replay ZIP from the named Git commit, retaining byte-identical source tables."""
 import argparse
 import csv
 import hashlib
@@ -26,7 +26,7 @@ def sha(data):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--commit",default="HEAD")
-    p.add_argument("--output",type=Path,default=ROOT/"dist/poly05-report-materials.zip")
+    p.add_argument("--output",type=Path,default=ROOT/"dist/poly05-replay.zip")
     a=p.parse_args()
     commit=git("rev-parse",a.commit+"^{commit}").decode().strip()
     tree={path:header.split()[-1] for entry in git("ls-tree","-rz",commit).decode().split("\0") if entry
@@ -63,10 +63,10 @@ def main():
         assert stream[end:end+1]==b"\n"
         pos=end+1
     assert pos==len(stream)
-    info=dict(work_package="POLY05-CLOSEOUT",status="POLY05_REPORT_MATERIALS_READY_PENDING_MAIN_REVIEW",
+    info=dict(work_package="POLY05-CLOSEOUT",status="POLY05_REPLAY",
               commit=commit,base=BASE,science_freeze=FREEZE,scientific_code_changed=False,old_release=OLD_RELEASE,
               original_review_sha256="7dbe8d39e21c33d296e6d747cc253557b7bd3ccd58c9c7d58d7a1f25e4435785",
-              entry="report/poly05/manuscript_materials.html",replay="report/poly05/replay/index.html",
+              entry="report/poly05/replay/index.html",
               verify="python -B -X utf8 scripts/poly05/verify.py")
     payload["POLY05-INFO.json"]=(json.dumps(info,indent=2)+"\n").encode()
     receipt=io.StringIO(newline="")

@@ -1,18 +1,14 @@
 
-"""Generate the reporting documents and graphics strictly from existing files."""
+"""Generate the figures, captions and replay strictly from existing files."""
 import argparse
-import html
 import json
 import os
-import re
 from pathlib import Path
-import markdown
-from matplotlib import mathtext, font_manager
-from facts import MAT, FIG, csv_bytes, build as make_facts
+from facts import MAT, csv_bytes, build as make_facts
 import evidence
 import figures
 
-os.environ.setdefault("SOURCE_DATE_EPOCH","946684800")  # Stable SVG metadata, including formula assets.
+os.environ.setdefault("SOURCE_DATE_EPOCH","946684800")  # Stable SVG metadata.
 
 def caption_book(data):
     a=data["action"];before,after=a["before"],a["after"]
@@ -47,47 +43,6 @@ def caption_book(data):
     (MAT/"figures.md").write_text("\n\n".join(sections)+"\n",encoding="utf-8",newline="\n")
 
 
-PRINT_CSS="""
-*{box-sizing:border-box}html{color:#243638;background:#f6f5f1}body{margin:0}
-body,table,code{font-family:"Times New Roman",SimSun,"宋体",serif;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-fareast-font-family:宋体}
-main{max-width:950px;padding:3em clamp(16px,5vw,65px) 4em;margin:auto;background:#fff;font-size:18px;line-height:1.73}
-h1,h2,h3{font-weight:normal;line-height:1.4;color:#163e3d;break-after:avoid}
-h1{font-size:1.9em;margin-top:0;border-top:3px solid #18766b;padding-top:.55em}
-h2{margin:1.4em 0 .4em;font-size:1.47em;border-bottom:1px solid #a8bbb6}
-h3{font-size:1.18em;margin:1.1em 0 .3em}p{margin:.55em 0}a{color:#165950;text-underline-offset:.16em}
-table{border-collapse:collapse;width:100%;font-size:.93em;line-height:1.5;margin:1.1em 0;font-variant-numeric:tabular-nums}
-th,td{padding:.5em .6em;vertical-align:top;text-align:left}thead{border-block:1.5px solid #263d3b}th{font-weight:normal;color:#155e55}
-tbody{border-bottom:1.5px solid #263d3b}tbody tr+tr{border-top:1px solid #dde5e1}
-img{display:block;max-width:100%;height:auto;margin:1.1em auto 0}img.formula{margin:1.1em auto;width:auto;max-width:100%;height:2.8em}
-p.caption{margin:.1em 0 1.25em;color:#405453;font-size:.93em;line-height:1.52}
-nav{font-size:.86em;border-bottom:1px solid #b5c5c1;padding-bottom:.6em;margin-bottom:1.4em}strong{color:#173f3d}
-@media(max-width:650px){main{font-size:16px}table{display:block;overflow-x:auto}th,td{min-width:5em}}
-@media print{@page{size:A4;margin:22mm 21mm}html{background:white}nav{display:none}main{font-size:10.5pt;max-width:none;padding:0}img,table{break-inside:avoid}h2,h3{break-after:avoid}p:has(>img){break-after:avoid}p.caption{break-before:avoid}a{color:inherit;text-decoration:none}}
-"""
-
-
-def manuscript():
-    from matplotlib import rc_context
-    doc=(MAT/"manuscript_materials.md").read_text(encoding="utf-8")
-    formulas=FIG/"formulas"
-    formulas.mkdir(exist_ok=True,parents=True)
-    count=0
-    def formula(match):
-        nonlocal count
-        count+=1
-        eq=match.group(1);name=f"equation-{count}.svg"
-        # SVG paths make the mathematical font independent of the reader's browser.
-        with rc_context({"mathtext.fontset":"stix","svg.fonttype":"path","svg.hashsalt":"poly05"}):
-            mathtext.math_to_image("$"+eq+"$",formulas/name,prop=font_manager.FontProperties(size=15,math_fontfamily="stix"),format="svg",color=figures.INK)
-        figures.svg_lf(formulas/name)
-        return f'<img class="formula" src="../../results/poly05/figures/formulas/{name}" alt="{html.escape(eq,quote=True)}">'
-    doc=re.sub(r"^\$\$(.*?)\$\$$",formula,doc,flags=re.M)
-    body=markdown.markdown(doc,extensions=["tables","fenced_code"])
-    body=re.sub(r"<p>(图 [1-6]　)",r'<p class="caption">\1',body)
-    page='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>限时交付下保持部件与孔对应的二值蒙版多边形编码</title><style>'+PRINT_CSS+'</style></head><body><main><nav><a href="replay/index.html">已保存实验结果回放</a>　·　<a href="facts.csv">取数事实表</a>　·　<a href="manuscript_materials.md">Markdown 稿</a></nav>'+body+'</main></body></html>\n'
-    (MAT/"manuscript_materials.html").write_text(page,encoding="utf-8",newline="\n")
-
-
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--figure",type=int,choices=range(1,7),help="Render one numbered plate only.")
@@ -106,8 +61,7 @@ def main():
     template=Path(__file__).with_name("replay-template.html").read_text(encoding="utf-8")
     encoded=json.dumps(data,ensure_ascii=False,separators=(",",":")).replace("<",r"\u003c")
     (evidence.REPLAY/"index.html").write_text(template.replace("__SAVED_DATA__",encoded),encoding="utf-8",newline="\n")
-    manuscript()
-    print(f"Generated {len(ledger)} sourced facts, six plates, {len(data['cases'])} decoded pairs and the reading edition.")
+    print(f"Generated {len(ledger)} sourced facts, six plates, {len(data['cases'])} decoded pairs.")
 
 
 if __name__=="__main__":

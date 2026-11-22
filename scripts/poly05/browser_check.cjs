@@ -89,19 +89,10 @@ async function main() {
     await page.setViewportSize({width:390,height:844});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
     if(dest) await page.screenshot({path:path.join(dest,"replay-mobile.png"),fullPage:true});
-    await page.setViewportSize({width:1220,height:920});
-    await page.goto(pathToFileURL(path.join(dir,"manuscript_materials.html")).href);
-    await page.waitForFunction(()=>[...document.images].length===8&&[...document.images].every(im=>im.complete&&im.naturalWidth>0));
-    assert.equal(await page.locator("table").count(),4);
-    assert.equal(await page.locator("img.formula").count(),2);
-    const tableFonts=await platformFonts(page,["tbody tr:first-child td:first-child","h1"]);
-    assert.match(Object.values(tableFonts).flat().join(" "),/Times New Roman/i);
-    assert.match(Object.values(tableFonts).flat().join(" "),/SimSun|宋体/i);
-    if(dest) await page.screenshot({path:path.join(dest,"reader.png")});
     assert.deepEqual(problems,[]);
     console.log(JSON.stringify({browser:browser.version(),scheme:"file",network:"offline",cases:results,
-      view_mode_checks:modes,figures:6,formula_images:2,reader_tables:4,
-      replay_platform_fonts:fonts,reader_platform_fonts:tableFonts,mobile_overflow:false,errors:problems},null,2));
+      view_mode_checks:modes,
+      replay_platform_fonts:fonts,mobile_overflow:false,errors:problems},null,2));
   } finally {await browser.close();}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

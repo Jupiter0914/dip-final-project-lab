@@ -191,37 +191,13 @@ def verify_cases():
     return len(joined["cases"]),len(digests|{a["before"]["sha256"],a["after"]["sha256"]})
 
 
-def documents(ledger):
-    doc=(MAT/"manuscript_materials.md").read_text(encoding="utf-8")
-    byid={r["fact_id"]:r for r in ledger}
-    def interval(key):
-        r=byid[key]
-        return (f"{float(r['value']):.2f} [{float(r['ci95_low']):.2f}, {float(r['ci95_high']):.2f}]").replace("-","−")
-    for prefix in ("O","L"):
-        key=prefix+".256.100.within_full.xor_saved"
-        assert interval(key) in doc
-        for b,t in [(256,200),(128,100),(512,100)]:
-            assert interval(f"{prefix}.{b}.{t}.within_full.xor_saved") in doc
-        for scope in ("all","R2+"):
-            for m in ("within_full","cross"):
-                q=byid[f"{prefix}.{scope}.{m}.coverage"]
-                assert f"{q['value']}/{q['calls_or_matched_pairs']}" in doc
-    for base in ("cgal","cgal_within"):
-        r=byid["O.256.100."+base+".xor_saved"]
-        assert f"{float(r['value']):.2f} 像素（{r['independent_sources']}" in doc
-        assert f"[{float(r['ci95_low']):.2f}, {float(r['ci95_high']):.2f}]" in doc
-    for k,digits in [("O.256.100.within_full.relative_xor_saved_pct",7),("O.struct.recovered_after_invalid",2),
-                     ("O.struct.final_valid",2),("O.loo.min",2),("O.loo.max",2)]:
-        assert f"{float(byid[k]['value']):.{digits}f}" in doc
+def check_figures_and_links():
     for svg in FIG.glob("*.svg"):
         s=svg.read_text(encoding="utf-8")
         assert "TimesNewRoman" in s and "SimSun" in s and "<text " not in s
         im=Image.open(svg.with_suffix(".png"))
         assert im.width>=2200 and im.info["dpi"][0]>319
     assert len(list(FIG.glob("*.svg")))==6
-    for p in (FIG/"formulas").glob("*.svg"):
-        assert "STIX" in p.read_text(encoding="utf-8")
-    assert len(list((FIG/"formulas").glob("*.svg")))==2
     texts=list(MAT.glob("*.md"))+[ROOT/"README.md"]
     count=0
     for p in texts:
@@ -259,9 +235,9 @@ def main():
     groups,primary=independent_stats()
     timed=study_population()
     cases,unique=verify_cases()
-    links=documents(ledger)
+    links=check_figures_and_links()
     report=dict(facts=len(ledger),raw_comparisons=groups,primary=primary,coverage=timed,
-                replay_pairs=cases,distinct_example_files=unique,figures=6,formula_svgs=2,local_markdown_links=links)
+                replay_pairs=cases,distinct_example_files=unique,figures=6,local_markdown_links=links)
     if (ROOT/".git").exists():
         report["unchanged_locked_git_blobs"]=git_snapshot()
     if args.working_fingerprints:

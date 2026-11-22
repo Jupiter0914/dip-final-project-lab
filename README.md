@@ -4,7 +4,7 @@
 
 我们让两个编码器从同一组顶点开始。一个只能在同一圈内移动顶点（`within_full`），另一个还可以把一个顶点转给另一圈（`cross`）。两者都要把结果写成可独立解码的 PM31 文件，并在回填后逐一核对前景部件、孔及其邻接关系。
 
-**在 Oxford 的 146 个可配对多环蒙版上，允许跨圈平均少错 2.26 个像素，中位数为 0。** 这一收益集中在部分形状上。外部 LEMS 数据只有 7 个可配对多环形状，尚不足以确认跨数据集的稳定收益。[中文报告材料](report/poly05/manuscript_materials.md) · [逐源结果](results/poly04/confirm/analysis/source_pairs.csv)
+**在 Oxford 的 146 个可配对多环蒙版上，允许跨圈平均少错 2.26 个像素，中位数为 0。** 这一收益集中在部分形状上。外部 LEMS 数据只有 7 个可配对多环形状，尚不足以确认跨数据集的稳定收益。[逐源结果](results/poly04/confirm/analysis/source_pairs.csv)
 
 ## 看一个点怎样改变结果
 
@@ -12,7 +12,7 @@
 
 ![Ragdoll_32 跨圈转移一个顶点前后的同坐标放大图](results/poly05/figures/02-exchange.png)
 
-**想自己查看案例**，下载下方素材包并完整解压，双击 `report/poly05/replay/index.html`。选择 `Ragdoll_32` 可查看这次转移，也可切换到持平、退化和孔缩小的案例。八个案例均可断网查看。[下载离线素材包（ZIP，约 8 MB）](https://github.com/Jupiter0914/dip-final-project-lab/releases/download/poly05-report-materials-v1/poly05-report-materials.zip) · [附件校验值](https://github.com/Jupiter0914/dip-final-project-lab/releases/tag/poly05-report-materials-v1)
+**想自己查看案例**，下载下方回放包并完整解压，双击 `report/poly05/replay/index.html`。选择 `Ragdoll_32` 可查看这次转移，也可切换到持平、退化和孔缩小的案例。八个案例均可断网查看。[下载离线回放包（ZIP，约 8 MB）](https://github.com/Jupiter0914/dip-final-project-lab/releases/download/poly05-replay-v1/poly05-replay.zip) · [附件校验值](https://github.com/Jupiter0914/dip-final-project-lab/releases/tag/poly05-replay-v1)
 
 ## 怎样读实验结果
 
@@ -27,7 +27,7 @@
 
 ## 复算与运行
 
-**复算报告数字。** 在完整 Git 克隆的根目录，用 Python 3.12 环境运行以下两条命令。脚本从已保存的逐次结果重算统计，并解码核对八个案例。无需下载完整数据集、运行计时实验或使用 GPU。[核验内容与环境](report/poly05/README.md)
+**复算实验数字。** 在完整 Git 克隆的根目录，用 Python 3.12 环境运行以下两条命令。脚本从已保存的逐次结果重算统计，并解码核对八个案例。无需下载完整数据集、运行计时实验或使用 GPU。[核验内容与环境](report/poly05/README.md)
 
 ```shell
 python -m pip install -r configs/poly03/requirements.txt
@@ -48,6 +48,6 @@ python -B -X utf8 -m poly04.run_one --file input-binary.png --method cross --bud
 | 单外轮廓（初选、POLY02） | 只保留一条外轮廓、固定为 16 或 32 点时，按回填误差选点能改善多少？ | [初次确认](report/findings.md) · [区域对照与边界保护](report/poly02/README.md) |
 | 完整蒙版探索（POLY03） | 多个部件与孔如何共享顶点，如何把它们写入同一文件？ | [开发结论](report/poly03/review.md) · [格式与解码](report/poly03/format.md) |
 | 独立确认（POLY04） | 同码长、同起点、同一交付时限下，跨圈是否优于增强圈内方法？ | [冻结协议](records/poly04/freeze.md) · [逐次观察](results/poly04/confirm/per_run.csv) · [完整实验审核包](https://github.com/Jupiter0914/dip-final-project-lab/releases/tag/poly04-confirm-review-v1) |
-| 结项材料（POLY05） | 怎样从一张图或一个结论追到具体字节、代码和原始数据？ | [中文报告材料](report/poly05/manuscript_materials.md) · [事实表](report/poly05/facts.csv) · [六幅图及图注](report/poly05/figures.md) |
+| 案例与复算（POLY05） | 怎样从一张图或一个结论追到具体字节、代码和原始数据？ | [事实表](report/poly05/facts.csv) · [六幅图及图注](report/poly05/figures.md) |
 
 数据及署名见 [Oxford-IIIT Pet 标注说明](records/attribution.md) 和 [LEMS 来源记录](records/poly02/research.md)。各阶段的固定版本可在 [Releases](https://github.com/Jupiter0914/dip-final-project-lab/releases) 下载。

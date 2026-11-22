@@ -3,16 +3,16 @@
 
 建议先用回放打开 Ragdoll_32 的“真实跨圈动作”，看清一个点从哪个圈转到了哪个圈。随后按下表阅读固定版本的函数名。在解压素材包中，[固定代码树](https://github.com/Jupiter0914/dip-final-project-lab/tree/9c8ce11143dfb30e310965136616fe0addb5c1ef) 可补查上下文。完整本地克隆可以直接点击下列文件。
 
-| 从哪里读 | 输入与输出 | 核心动作与报告位置 |
+| 从哪里读 | 输入与输出 | 核心动作 |
 |---|---|---|
-| [poly04/prepare.py](../../poly04/prepare.py) 的 prepare_input → [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 extract | 原尺寸二值数组、字节上限 → 有序高精度环、父编号、目标总点数或终态 | 补零、取等值线，逐圈回填检验高精度像素相等，再算预算下界。对应正文 3.1、3.2 |
-| [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 pack、unpack、Renderer.ring、Renderer.combined、decode | 圈记录 ↔ PM31 字节 → 原尺寸二值数组 | 查看小端头、父圈、点数与四分之一格坐标。各圈单独画，原中心取样后异或。对应 3.1 |
-| [poly03/allocation.py](../../poly03/allocation.py) 的 hierarchy、curves、optimal、candidates → [poly04/prepare.py](../../poly04/prepare.py) 的 allocation_seed | 各圈原弧段、共同点数 → 各点数的候选层级与误差 → 首份合格点集 | RDP 按最大偏离分裂，DP 在这些层级上记下到每种总点数的最低代价和分配，有限池按顺序调用 validate_rings。对应 3.2 |
-| [poly04/proposals.py](../../poly04/proposals.py) 的 individual_scores、sorted_pairs、candidates_for_method | 当前各圈、原高精度弧段 → 预排后的至多 24 对删插 | 单删和单插预评分，用有序归并取合法组合前列。方法标记控制能否转圈，三角形只可给本圈对边替点。对应 3.3 |
-| [poly03/atomic.py](../../poly03/atomic.py) 的 replace_vertex 与 [poly04/engine.py](../../poly04/engine.py) 的 exchange_step | 供体、原顶点下标、接收边、新坐标 → 最终点数守恒的候选及实际动作日志 | 依据操作前的下标一次构造最终环，先查可加下降，再实际合成整图并要求 XOR 严格下降。对应 3.3、图 2 |
-| [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 vector_ok、digital、overlap_map、correspondence | 原父圈与候选环、参考与解码标签 → 接受或具体拒绝原因 | 检查几何与嵌套，建立部件和有限孔的双向唯一空间对应，再核对邻接。对应 3.3、5.3 |
-| [poly04/engine.py](../../poly04/engine.py) 的 encode 内部 deliver → [poly04/study.py](../../poly04/study.py) 的 measure → [poly04/gather.py](../../poly04/gather.py) 的 gather | 内存中的源与回调 → 带时刻的字节轨迹 → 给定时点可选的最后一份文件 | 接受种子或新动作立即 pack 并同步回调，接收器首行读时钟。gather 只选实收到时的检查点。命令行 [run_one.py](../../poly04/run_one.py) 等函数返回后才落盘。对应 4、5.2 |
-| [poly04/analysis.py](../../poly04/analysis.py) 的 pair_data、gain_vector、average_sessions、intervals、method_coverage | 同源同会话同重复的截止记录 → 等权源均值、区间和覆盖 | 同实际码长且双方及时才算质量差，每源先均会话内重复，再均有效会话。全部输入单列交付覆盖。对应 4、5.1–5.4 |
+| [poly04/prepare.py](../../poly04/prepare.py) 的 prepare_input → [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 extract | 原尺寸二值数组、字节上限 → 有序高精度环、父编号、目标总点数或终态 | 补零、取等值线，逐圈回填检验高精度像素相等，再算预算下界。 |
+| [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 pack、unpack、Renderer.ring、Renderer.combined、decode | 圈记录 ↔ PM31 字节 → 原尺寸二值数组 | 查看小端头、父圈、点数与四分之一格坐标。各圈单独画，原中心取样后异或。 |
+| [poly03/allocation.py](../../poly03/allocation.py) 的 hierarchy、curves、optimal、candidates → [poly04/prepare.py](../../poly04/prepare.py) 的 allocation_seed | 各圈原弧段、共同点数 → 各点数的候选层级与误差 → 首份合格点集 | RDP 按最大偏离分裂，DP 在这些层级上记下到每种总点数的最低代价和分配，有限池按顺序调用 validate_rings。 |
+| [poly04/proposals.py](../../poly04/proposals.py) 的 individual_scores、sorted_pairs、candidates_for_method | 当前各圈、原高精度弧段 → 预排后的至多 24 对删插 | 单删和单插预评分，用有序归并取合法组合前列。方法标记控制能否转圈，三角形只可给本圈对边替点。 |
+| [poly03/atomic.py](../../poly03/atomic.py) 的 replace_vertex 与 [poly04/engine.py](../../poly04/engine.py) 的 exchange_step | 供体、原顶点下标、接收边、新坐标 → 最终点数守恒的候选及实际动作日志 | 依据操作前的下标一次构造最终环，先查可加下降，再实际合成整图并要求 XOR 严格下降。 |
+| [poly03/maskcodec.py](../../poly03/maskcodec.py) 的 vector_ok、digital、overlap_map、correspondence | 原父圈与候选环、参考与解码标签 → 接受或具体拒绝原因 | 检查几何与嵌套，建立部件和有限孔的双向唯一空间对应，再核对邻接。 |
+| [poly04/engine.py](../../poly04/engine.py) 的 encode 内部 deliver → [poly04/study.py](../../poly04/study.py) 的 measure → [poly04/gather.py](../../poly04/gather.py) 的 gather | 内存中的源与回调 → 带时刻的字节轨迹 → 给定时点可选的最后一份文件 | 接受种子或新动作立即 pack 并同步回调，接收器首行读时钟。gather 只选实收到时的检查点。命令行 [run_one.py](../../poly04/run_one.py) 等函数返回后才落盘。 |
+| [poly04/analysis.py](../../poly04/analysis.py) 的 pair_data、gain_vector、average_sessions、intervals、method_coverage | 同源同会话同重复的截止记录 → 等权源均值、区间和覆盖 | 同实际码长且双方及时才算质量差，每源先均会话内重复，再均有效会话。全部输入单列交付覆盖。 |
 
 ## 沿主路径读一遍
 
@@ -48,4 +48,4 @@ python -B -X utf8 scripts/poly05/verify.py
 python -B -X utf8 scripts/poly05/build.py
 ```
 
-第一条只读校验。第二条从既有表和案例文件重建本轮事实表、图、回放与带字体的正文阅读版。生成依赖及原始审核包见 [素材说明](README.md)。
+第一条只读校验。第二条从既有表和案例文件重建本轮事实表、图、回放。生成依赖及原始审核包见 [回放说明](README.md)。
