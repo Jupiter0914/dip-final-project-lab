@@ -1,4 +1,3 @@
-
 # 报告素材与复核入口
 
 推荐先读[排版阅读版](manuscript_materials.html)，在讨论顶点分配时打开[本地回放](replay/index.html)并选择 Ragdoll_32。展开“查看这个源的真实跨圈动作”可以看到同一条轨迹的两次交付，原文件可直接下载。写作使用[中文 Markdown 材料](manuscript_materials.md)，取数使用[事实表](facts.csv)，插图从[图注与原文件](figures.md)选择 PNG 或 SVG。阅读版的表格采用三线表，正文公式已排成 STIX 矢量字形。PNG 与 SVG 中的英文和数字用 Times New Roman，中文用宋体。网页正文和表格调用读者系统上的相应字体。
@@ -31,6 +30,4 @@ python -B -X utf8 scripts/poly05/build.py --figure 2
 
 [本轮核对回执](verification.json)记载逐次配对重算、实际像素回放、浏览器选用的字体和冻结锁比对。
 
-取数基准为 `9c8ce11143dfb30e310965136616fe0addb5c1ef`，科学冻结为 `ff70458c06a8fd36e68f546a9b350510968dcddf`。当前材料位于独立分支 `codex/poly05-closeout`。包根的 `POLY05-INFO.json` 对应本轮固定提交。本轮仅复算既有表与解码实例，沿用 POLY04 干净解压后完成的 12168 次调用日志审计回执。历史阶段的完整目录和科学环境见原审核包。[本轮固定 Release](https://github.com/Jupiter0914/dip-final-project-lab/releases/tag/poly05-report-materials-v1) · [原始完整审核提交](https://github.com/Jupiter0914/dip-final-project-lab/commit/9c8ce11143dfb30e310965136616fe0addb5c1ef)
-
-**POLY05_REPORT_MATERIALS_READY_PENDING_MAIN_REVIEW**
+取数基准为 `9c8ce11143dfb30e310965136616fe0addb5c1ef`，科学冻结为 `ff70458c06a8fd36e68f546a9b350510968dcddf`。这份素材的固定版本为标签 `poly05-report-materials-v1`，结项阅读入口见[项目首页](../../README.md)。包根的 `POLY05-INFO.json` 对应本轮固定提交。本轮仅复算既有表与解码实例，沿用 POLY04 干净解压后完成的 12168 次调用日志审计回执。历史阶段的完整目录和科学环境见原审核包。[本轮固定 Release](https://github.com/Jupiter0914/dip-final-project-lab/releases/tag/poly05-report-materials-v1) · [原始完整审核提交](https://github.com/Jupiter0914/dip-final-project-lab/commit/9c8ce11143dfb30e310965136616fe0addb5c1ef)
